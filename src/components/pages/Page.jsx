@@ -1,5 +1,6 @@
 // Importing combination
 import React, { Component } from "react";
+//import MediaQuery from "../../utils/MediaQuery";
 
 export default class Page extends Component {
   constructor(props) {
@@ -13,13 +14,10 @@ export default class Page extends Component {
     else this.setState({ color: "#4cb96b" });
   }
 
-
   render() {
     return (
       <div>
-     
         <h1>Page</h1>
-
       </div>
     );
   }

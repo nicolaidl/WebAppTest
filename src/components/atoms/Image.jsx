@@ -18,6 +18,7 @@ const style = {
 export default function Image(props) {
 
   console.log(props.image);
+  //<button className={`pill ${ this.props.styleName }`}>
 
   return (
     <img

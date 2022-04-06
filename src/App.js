@@ -1,14 +1,23 @@
-import startImage from './images/pexels-desk.jpg';
 import './App.css';
 import React from 'react';
 
-import Image from './components/atoms/Image'
+import Page from './components/pages/Page'
+import FlexGrid3Row from './components/atoms/FlexGrid3Row';
+import useWindowDimensions from './utils/MediaQuery';
 
 function App() {
+
+
+  let asd = useWindowDimensions();
+  console.log('see this: ' + asd)
+
+
   return (
     <>
-      <p>Home Page</p>
-      <Image image={startImage} type={"hero"} alt={"err"} />
+
+      <Page />
+      <FlexGrid3Row />
+
     </>
   );
 }
