@@ -31,6 +31,8 @@ export default function useWindowDimensions() {
   }
 }
 
+export const mobileViewPort = 600;
+
 // export default function useWindowDimensions() {
 //   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
