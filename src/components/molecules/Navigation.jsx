@@ -11,8 +11,10 @@ const style = css`
   }
 
   nav {
+    font-family: 'Rubik',sans-serif;
     font-size: 20px;
     font-weight: 700;
+    
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -21,17 +23,22 @@ const style = css`
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
+    color: #fff;
   }
 `;
 
 export default function Navigation(props) {
   return (
-    <div css={style}>
+    <div className="navigation-molecule" css={style}>
       {/* </header>
       <header> ??? */}
-      <nav className="container">
+      <nav className="navigation">
         <div>LOGO</div>
-        <div>NAVIGATION</div>
+        {props.navs.map((object, i) => (
+          <p obj={object} key={i}>
+            {object}
+          </p>
+        ))}
       </nav>
     </div>
   );
@@ -39,5 +46,5 @@ export default function Navigation(props) {
 
 Navigation.defaultProps = {
   logo: defaultLogo,
-  navs: ["services", "About"],
+  navs: ["Home", "Services", "About"],
 };
