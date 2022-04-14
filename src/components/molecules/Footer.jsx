@@ -10,6 +10,18 @@ const style = css`
     box-sizing: border-box;
   }
 
+  // .container {
+  //       margin: 0px auto;
+  //      
+  //     }
+
+  // header {
+  //   height: 100vh;
+  //   position: relative;
+  //   background-image: url("../hero-image.jpg");
+  //   background-size: cover;
+  // }
+
   nav {
     font-size: 20px;
     font-weight: 700;
@@ -17,16 +29,16 @@ const style = css`
     justify-content: space-between;
     background-color: green;
     max-width: 1200px;
-    margin: auto;
+    margin: auto auto;
   }
 `;
 
-export default function Navigation(props) {
+export default function Footer(props) {
   return (
     <div css={style}>
       {/* </header>
       <header> ??? */}
-      <nav className="container">
+      <nav className="footer">
         <div>LOGO</div>
         <div>NAVIGATION</div>
       </nav>
@@ -34,7 +46,7 @@ export default function Navigation(props) {
   );
 }
 
-Navigation.defaultProps = {
+Footer.defaultProps = {
   logo: defaultLogo,
   navs: ["services", "About"],
 };

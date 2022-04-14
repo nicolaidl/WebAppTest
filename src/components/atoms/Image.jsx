@@ -6,6 +6,7 @@ import { css } from "@emotion/react";
 const style = css`
     .image-hero {
       width: 100%;
+      width: 100%;
     }
     .default{
       width: "300px";
@@ -17,29 +18,17 @@ const style = css`
     },
 `;
 
-// const style = {
-//   hero: {
-//     width: "100%",
-//   },
-//   default: {
-//     width: "300px",
-//     height: "300px",
-//   },
-//   standard: {
-//     width: "300px",
-//     height: "300px",
-//   },
-// };
-
 export default function Image(props) {
   return (
-    <div css={style}>
-      <img
-        // className={`image${props.type !== "default" ? "-" + props.type : ""}`}
-        className={"image-hero"}
-        src={props.image}
-        alt={props.alt}
-      />
+    <div className="image-atom" css={style}>
+      <div className="image-container">
+        <img
+          // className={`image${props.type !== "default" ? "-" + props.type : ""}`}
+          className={"image-hero"}
+          src={props.image}
+          alt={props.alt}
+        />
+      </div>
     </div>
   );
 }
