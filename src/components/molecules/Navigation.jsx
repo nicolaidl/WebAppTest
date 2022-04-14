@@ -15,9 +15,12 @@ const style = css`
     font-weight: 700;
     display: flex;
     justify-content: space-between;
-    background-color: green;
+    width: 100%;
     max-width: 1200px;
-    margin: auto;
+    padding-top: 32px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 `;
 
