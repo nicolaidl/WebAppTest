@@ -10,6 +10,7 @@ const style = css`
     padding: 0px;
     box-sizing: border-box;
     font-family: "Rubik", sans-serif;
+    max-width: 100%;
   }
 
   .container {
@@ -137,18 +138,6 @@ export default function Hero(props) {
             </div>
           </div>
         </header>
-
-        <section>
-          <div className="container">
-            <h2>Some random heading</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod
-              atque, cum molestias obcaecati maxime! Esse minima reprehenderit
-              natus maxime saepe autem eveniet exercitationem recusandae quo!
-              Perspiciatis non et nulla?
-            </p>
-          </div>
-        </section>
       </div>
     </div>
   );

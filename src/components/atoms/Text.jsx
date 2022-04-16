@@ -1,63 +1,63 @@
+/** @jsxImportSource @emotion/react */ // this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
 import React from "react";
-import styled, { css } from 'styled-components'
+import { css } from "@emotion/react";
 
+const style = css`
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    max-width: 100%;
+  }
 
+  h1 {
+    font-size: 52px;
+    margin-bottom: 32px;
+  }
 
-// const Button = styled.button`
-//   background: transparent;
-//   border-radius: 3px;
-//   border: 2px solid palevioletred;
-//   color: palevioletred;
-//   margin: 0.5em 1em;
-//   padding: 0.25em 1em;
+  h2 {
+    font-size: 44px;
+    margin-bottom: 48px;
+  }
 
-//   // ${props => props.primary && css`
-//   //   background: palevioletred;
-//   //   color: white;
-//   // `}
-// `;
+  p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 48px;
+  }
 
-const style = {
-  body: {
-    fontFamily: "Times New Roman",
-    fontSize: "15px", //font-size: 15px;
-  },
-  header1: {
-    fontFamily: "Times New Roman",
-    fontSize: "38px", //font-size: 15px;
-    color: "white",
-  },
-};
+  // section {
+  //   padding: 96px 0;
+  //   background-color: #f7f7f7;
+  // }
+`;
 
-//font-family: "Times New Roman", Times, serif
-
-// const P = styled.p`
-// background: black;
-// border-radius: 3px;
-// border: 2px solid palevioletred;
-// margin: 0.5em 1em;
-// padding: 0.25em 1em;
-// color: black;
-
-// ${props => props.header1 && css`
-//     background: palevioletred;
-//     color: white;
-//   `}
-// `
 export default function Text(props) {
+  console.log(props);
+  console.log(props.text);
 
   return (
-    // <P >
-    //   {props.text}
-    // </P>
-  
-    <p className="text" style={style[props.type]}>
-      {props.text}
-    </p>
+    <div className="text" css={style}>
+      {props.header1 ? <h1>props.header1</h1> : ""}
+      {props.header2 ? <h2>props.header2</h2> : ""}
+      {props.header3 ? <h3>props.header3</h3> : ""}
+      {props.header3 ? <h4>props.header3</h4> : ""}
+
+      {props.text ? <p className="text">{props.text}</p> : ""}
+    </div>
   );
 }
 
 Text.defaultProps = {
-  text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
   type: "body",
 };
+
+// Text.defaultProps = {
+//   text: "Default text",
+//   type: "Default body",
+//   header1: "Default Header 1",
+//   header2: "Default Header 2",
+//   header3: "Default Header 3",
+//   header4: "Default Header 4",
+// };
