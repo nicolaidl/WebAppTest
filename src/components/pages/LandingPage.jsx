@@ -20,7 +20,7 @@ export default class LandingPage extends Component {
     return (
       <div>
         <Hero />
-        <HeaderAndText props={content.headerAndTextContent} />
+        {/* <HeaderAndText props={content.headerAndTextContent} /> */}
       </div>
     );
   }

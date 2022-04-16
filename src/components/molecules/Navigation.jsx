@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */ // this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import { css } from "@emotion/react";
 import defaultLogo from "../../images/logo-default.png";
 
@@ -34,6 +35,12 @@ const style = css`
   //position: absolute;
   //transform: translate(-50%, 0);
   //color: #fff;
+
+  .a-active-class {
+    color: #95bcf0;
+    padding-bottom: 0.25rem;
+    border-bottom: 4px solid ##95bcf0;
+  }
 `;
 
 export default function Navigation(props) {
@@ -44,22 +51,21 @@ export default function Navigation(props) {
 
       <div className="navigation-container">
         <nav className="navigation-box1">
-          <p>LOGO</p>
+          <Link to="/Home" className="btn">
+            {"Logo"}
+          </Link>
         </nav>
 
         <nav className="navigation-box2">
           {props.navs.map((object, i) => (
-            <a href={object} className="btn" key={i}>
+            <NavLink
+              to={object}
+              className="btn"
+              key={i}
+              activeClassName="a-active-class"
+            >
               {object}
-            </a>
-
-            // <a href obj={object} key={i}>
-            //   {object}
-            // </a>
-
-            // <p obj={object} key={i}>
-            //   {object}
-            // </p>
+            </NavLink>
           ))}
         </nav>
       </div>
@@ -69,5 +75,5 @@ export default function Navigation(props) {
 
 Navigation.defaultProps = {
   logo: defaultLogo,
-  navs: ["Home", "Services", "About"],
+  navs: ["Home", "Services", "Contact", "About"],
 };

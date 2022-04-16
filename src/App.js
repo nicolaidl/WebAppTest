@@ -1,28 +1,47 @@
 import './App.css';
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import LandingPage from './components/pages/LandingPage';
+import ContactPage from './components/pages/ContactPage';
+import ServicesPage from './components/pages/ServicesPage';
+import AboutPage from './components/pages/AboutPage';
 import Navigation from './components/molecules/Navigation';
 import Footer from './components/molecules/Footer';
 
 function App() {
 
   return (
-
-
     <div className='app' style={{ position: "relative" }}>
-
-      <Route pah="/home">
-
-      </Route>
       <Navigation />
 
+      <Switch>
+        <Route path="/" exact>
+          <Redirect to="/Home" />
+        </Route>
 
-      {/* 
-      <LandingPage />
+        <Route path="/Home" exact>
+          <LandingPage />
+        </Route>
 
-      <Footer /> */}
+        <Route path="/services" exact>
+          <ServicesPage />
+        </Route>
+
+        <Route path="/contact" exact>
+          <ContactPage />
+        </Route>
+
+        <Route path="/about" exact>
+          <AboutPage />
+        </Route>
+
+        <Route path="*">
+          <Redirect to="/Home" />
+        </Route>
+      </Switch>
+
+      {/* <Footer /> */}
 
     </div>
   );
