@@ -12,6 +12,7 @@ const style = css`
     font-family: "Rubik", sans-serif;
     font-size: 20px;
     font-weight: 700;
+    z-index: 1;
   }
 
   .navigation-container {

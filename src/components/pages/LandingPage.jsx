@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import HeaderAndText from "../molecules/HeaderAndText";
-//import MediaQuery from "../../utils/MediaQuery";
 import Hero from "../molecules/Hero";
 
 export default class LandingPage extends Component {
@@ -12,15 +11,15 @@ export default class LandingPage extends Component {
   render() {
     let content = {
       headerAndTextContent: {
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod atque, cum molestias obcaecati maxime! Esse minima reprehenderit natus maxime saepe autem eveniet exercitationem recusandae quo! Perspiciatis non et nulla?",
         header2: "Some random heading",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod atque, cum molestias obcaecati maxime! Esse minima reprehenderit natus maxime saepe autem eveniet exercitationem recusandae quo! Perspiciatis non et nulla?",
       },
     };
 
     return (
       <div>
-        <Hero />
-        {/* <HeaderAndText props={content.headerAndTextContent} /> */}
+        {/* <Hero /> */}
+        <HeaderAndText props={content.headerAndTextContent} />
       </div>
     );
   }

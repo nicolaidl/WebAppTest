@@ -26,7 +26,11 @@ export default function HeaderAndText(props) {
     <div css={style} className="header-and-text-molecule">
       <section>
         <div className="text-container">
-          <Text text={props} />
+          <Text tag="h1" type="header1" text={props.text} />
+          <Text tag="h2" type="header2" text={props.text} />
+          <Text tag="h3" type="header3" text={props.text} />
+          <Text tag="h4" type="header4" text={props.text} />
+          <Text tag="p" text={props.text} />
         </div>
       </section>
     </div>
@@ -34,8 +38,8 @@ export default function HeaderAndText(props) {
 }
 
 HeaderAndText.defaultProps = {
-  text: "Default text",
   type: "body",
+  text: "Default text",
   header1: "Default Header 1",
   header2: "Default Header 2",
   header3: "Default Header 3",

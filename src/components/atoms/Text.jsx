@@ -8,56 +8,85 @@ const style = css`
     padding: 0px;
     box-sizing: border-box;
     font-family: "Rubik", sans-serif;
-    max-width: 100%;
   }
 
-  h1 {
+  .header1 {
     font-size: 52px;
     margin-bottom: 32px;
   }
 
-  h2 {
+  .header2 {
     font-size: 44px;
     margin-bottom: 48px;
   }
 
-  p {
+  .header3 {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .header4 {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .p1 {
     font-size: 20px;
     line-height: 1.6;
     margin-bottom: 48px;
   }
-
-  // section {
-  //   padding: 96px 0;
-  //   background-color: #f7f7f7;
-  // }
 `;
 
 export default function Text(props) {
-  console.log(props);
-  console.log(props.text);
+  let renderSwitch = (tag, content) => {
+    switch (tag) {
+      case "p":
+        return <p>{content}</p>;
+      case "h1":
+        return <h1>{content}</h1>;
+      case "h2":
+        return <h2>{content}</h2>;
+      case "h3":
+        return <h3>{content}</h3>;
+      case "h4":
+        return <h4>{content}</h4>;
+      default:
+        return <p>Default</p>;
+    }
+  };
+
+  let getType = (tag, type) => {
+    if (type === "default") {
+      switch (tag) {
+        case "h1":
+          return "header1";
+        case "h2":
+          return "header2";
+        case "h3":
+          return "header3";
+        case "h4":
+          return "header4";
+        case "p":
+          return "p1";
+        default:
+          return <p>Default</p>;
+      }
+    } else {
+      return type;
+    }
+  };
 
   return (
-    <div className="text" css={style}>
-      {props.header1 ? <h1>props.header1</h1> : ""}
-      {props.header2 ? <h2>props.header2</h2> : ""}
-      {props.header3 ? <h3>props.header3</h3> : ""}
-      {props.header3 ? <h4>props.header3</h4> : ""}
-
-      {props.text ? <p className="text">{props.text}</p> : ""}
+    <div className="text-atom" css={style}>
+      <div className={`text ${getType(props.tag, props.type)}`}>
+        {renderSwitch(props.tag, props.content)}
+      </div>
     </div>
   );
 }
 
 Text.defaultProps = {
-  type: "body",
+  tag: "p",
+  type: "default",
+  content: "Default Content",
 };
-
-// Text.defaultProps = {
-//   text: "Default text",
-//   type: "Default body",
-//   header1: "Default Header 1",
-//   header2: "Default Header 2",
-//   header3: "Default Header 3",
-//   header4: "Default Header 4",
-// };

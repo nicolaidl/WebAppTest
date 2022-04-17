@@ -3,6 +3,7 @@ import React from "react";
 import Image from "../atoms/Image";
 import { css } from "@emotion/react";
 import frontImg from "../../images/pexels-desk.jpg";
+import { Link } from "react-router-dom";
 
 const style = css`
   * {
@@ -21,7 +22,7 @@ const style = css`
   header {
     height: 100vh;
     position: relative;
-    z-index: -1;
+    // z-index: -1;
     transform: translate(0%, -5%);
     color: #fff;
   }
@@ -132,9 +133,9 @@ export default function Hero(props) {
                 The smart 365-days-per-yer food sub that will make Lorem ipsum
                 dolor sit amet, consectetur adipisicing elit.
               </p>
-              <a href="/" className="btn">
-                See all services
-              </a>
+              <Link to="/Services" className="btn">
+                {"See all services"}
+              </Link>
             </div>
           </div>
         </header>
