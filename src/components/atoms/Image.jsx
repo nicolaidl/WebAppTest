@@ -8,6 +8,10 @@ const style = css`
       width: 100%;
       width: 100%;
     }
+    .image-logo {
+      width: 50px;
+      width: 50px
+    }
     .default{
       width: "300px";
       height: "300px";
@@ -23,8 +27,7 @@ export default function Image(props) {
     <div className="image-atom" css={style}>
       <div className="image-container">
         <img
-          // className={`image${props.type !== "default" ? "-" + props.type : ""}`}
-          className={"image-hero"}
+          className={`image${props.type !== "default" ? "-" + props.type : ""}`}
           src={props.image}
           alt={props.alt}
         />

@@ -30,21 +30,21 @@ export default class LandingPage extends Component {
           text={content.heroContent.text}
           header={content.heroContent.header}
         />
-        <HeaderAndText
+        {/* <HeaderAndText
           header1={content.headerAndTextContent1.header1}
           text={content.headerAndTextContent1.text}
           backgroundColor={"#fff"}
           textColor={"#000"}
-        />
+        /> */}
 
-        <section>
+        {/* <section>
           <HeaderAndText
             header2={content.headerAndTextContent2.header2}
             text={content.headerAndTextContent2.text}
             backgroundColor={"#f7f7f7"}
             textColor={"#2E2E2E"}
           />
-        </section>
+        </section> */}
       </div>
     );
   }

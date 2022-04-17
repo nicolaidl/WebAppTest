@@ -3,25 +3,32 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { css } from "@emotion/react";
 import defaultLogo from "../../images/logo-default.png";
+import Image from "../atoms/Image";
+import Text from "../atoms/Text";
+import logo from "../../images/logo-default.png";
 
 const style = css`
   * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
     font-family: "Rubik", sans-serif;
     font-size: 20px;
     font-weight: 700;
+
     z-index: 1;
   }
 
   .navigation-container {
+    position: absolute;
     display: flex;
-    justify-content: space-around;
+
     width: 100%;
-    max-width: 1000px;
+    width: 1200px;
+
     padding-top: 32px;
-    left: 50%;
+    left: 18.5%;
+  }
+
+  .navigation-box1 {
+    display: flex;
   }
 
   .navigation-box2 {
@@ -43,7 +50,7 @@ export default function Navigation(props) {
       <div className="navigation-container">
         <nav className="navigation-box1">
           <Link to="/Home" className="btn">
-            {"Logo"}
+            <Image alt="logo image" image={logo} type="logo" />
           </Link>
         </nav>
 
@@ -55,7 +62,7 @@ export default function Navigation(props) {
               key={i}
               activeClassName="a-active-class"
             >
-              {object}
+              <Text type="p1" tag="p" text={object} />
             </NavLink>
           ))}
         </nav>

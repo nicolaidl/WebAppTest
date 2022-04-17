@@ -23,7 +23,7 @@ const style = css`
   header {
     height: 100vh;
     position: relative;
-    transform: translate(0%, -5%);
+    // transform: translate(0%, -5%);
     color: #fff;
   }
 
