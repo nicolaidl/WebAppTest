@@ -1,4 +1,4 @@
-/** @jsxImportSource @emotion/react */ // this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
+/** @jsxImportSource @emotion/react */
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { css } from "@emotion/react";
@@ -28,14 +28,7 @@ const style = css`
     display: flex;
     justify-content: space-evenly;
     width: 80%;
-    // max-width: 1200px;
-    // padding-top: 32px;
-    // left: 50%;
   }
-
-  //position: absolute;
-  //transform: translate(-50%, 0);
-  //color: #fff;
 
   .a-active-class {
     color: #95bcf0;
@@ -47,9 +40,6 @@ const style = css`
 export default function Navigation(props) {
   return (
     <div className="navigation-molecule" css={style}>
-      {/* </header>
-      <header> ??? */}
-
       <div className="navigation-container">
         <nav className="navigation-box1">
           <Link to="/Home" className="btn">

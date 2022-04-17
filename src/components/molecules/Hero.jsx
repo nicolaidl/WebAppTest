@@ -4,6 +4,7 @@ import Image from "../atoms/Image";
 import { css } from "@emotion/react";
 import frontImg from "../../images/pexels-desk.jpg";
 import { Link } from "react-router-dom";
+import HeaderAndText from "./HeaderAndText";
 
 const style = css`
   * {
@@ -22,7 +23,6 @@ const style = css`
   header {
     height: 100vh;
     position: relative;
-    // z-index: -1;
     transform: translate(0%, -5%);
     color: #fff;
   }
@@ -118,6 +118,7 @@ const style = css`
 `;
 
 export default function Hero(props) {
+  console.log(props);
   return (
     <div css={style} className="hero-molecule">
       <div css={style}>
@@ -128,11 +129,12 @@ export default function Hero(props) {
 
           <div className="header-container">
             <div className="header-container-inner">
-              <h1>A healthy meal delivered to your door, every single day </h1>
-              <p>
-                The smart 365-days-per-yer food sub that will make Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit.
-              </p>
+              <HeaderAndText
+                header1={props.header}
+                text={props.text}
+                textColor={"#fff"}
+              />
+
               <Link to="/Services" className="btn">
                 {"See all services"}
               </Link>
@@ -143,3 +145,9 @@ export default function Hero(props) {
     </div>
   );
 }
+
+Hero.defaultProps = {
+  header: "Default Header",
+  text: "Default text",
+  textColor: "#8A8A8A",
+};

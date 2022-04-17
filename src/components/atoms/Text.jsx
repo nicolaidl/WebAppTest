@@ -76,10 +76,12 @@ export default function Text(props) {
     }
   };
 
+  console.log(props);
+
   return (
     <div className="text-atom" css={style}>
       <div className={`text ${getType(props.tag, props.type)}`}>
-        {renderSwitch(props.tag, props.content)}
+        {renderSwitch(props.tag, props.text)}
       </div>
     </div>
   );
