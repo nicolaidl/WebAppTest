@@ -10,8 +10,12 @@ export default class LandingPage extends Component {
 
   render() {
     let content = {
-      headerAndTextContent: {
-        header2: "Some random heading",
+      headerAndTextContent1: {
+        header1: "Some random heading 1",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod atque, cum molestias obcaecati maxime! Esse minima reprehenderit natus maxime saepe autem eveniet exercitationem recusandae quo! Perspiciatis non et nulla?",
+      },
+      headerAndTextContent2: {
+        header2: "Some random heading 2",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod atque, cum molestias obcaecati maxime! Esse minima reprehenderit natus maxime saepe autem eveniet exercitationem recusandae quo! Perspiciatis non et nulla?",
       },
     };
@@ -19,7 +23,15 @@ export default class LandingPage extends Component {
     return (
       <div>
         {/* <Hero /> */}
-        <HeaderAndText props={content.headerAndTextContent} />
+        <HeaderAndText
+          header1={content.headerAndTextContent1.header1}
+          text={content.headerAndTextContent1.text}
+        />
+
+        <HeaderAndText
+          header2={content.headerAndTextContent2.header2}
+          text={content.headerAndTextContent2.text}
+        />
       </div>
     );
   }
