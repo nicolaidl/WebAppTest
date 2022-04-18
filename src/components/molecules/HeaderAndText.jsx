@@ -28,8 +28,6 @@ export default function HeaderAndText(props) {
     color: `${props.textColor}`,
   };
 
-  console.log(props);
-
   return (
     <div css={style} className="header-and-text-molecule" style={divStyle}>
       <div className="text-container">

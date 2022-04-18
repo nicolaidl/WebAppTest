@@ -2,9 +2,9 @@
 import React from "react";
 import Image from "../atoms/Image";
 import { css } from "@emotion/react";
-import frontImg from "../../images/pexels-desk.jpg";
 import { Link } from "react-router-dom";
 import HeaderAndText from "./HeaderAndText";
+import defaultImage from "../../images/default-image.jpg";
 
 const style = css`
   * {
@@ -31,10 +31,13 @@ const style = css`
     width: 1200px;
     position: absolute;
     /*in relation to Parent size*/
-    left: 50%;
-    top: 50%;
+    left: 15%;
+    top: 40%;
+
     /*in relation to ELEMENT size*/
-    transform: translate(-50%, -50%);
+    // transform: translate(-50%, -50%);
+    // left: 50%;
+    // top: 50%;
   }
 
   .header-container-inner {
@@ -118,13 +121,12 @@ const style = css`
 `;
 
 export default function Hero(props) {
-  console.log(props);
   return (
     <div css={style} className="hero-molecule">
       <div css={style}>
         <header>
           <div className="pickgradient">
-            <Image image={frontImg} type="hero" alt="A desk full of tools" />
+            <Image image={props.image} type="hero" alt="A desk full of tools" />
           </div>
 
           <div className="header-container">
@@ -150,4 +152,5 @@ Hero.defaultProps = {
   header: "Default Header",
   text: "Default text",
   textColor: "#8A8A8A",
+  image: defaultImage,
 };

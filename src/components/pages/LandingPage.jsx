@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import HeaderAndText from "../molecules/HeaderAndText";
-import Hero from "../molecules/Hero";
+import Hero from "../organisms/Hero";
+import frontImg from "../../images/pexels-desk.jpg";
 
 export default class LandingPage extends Component {
   getClick() {
@@ -13,6 +14,7 @@ export default class LandingPage extends Component {
       heroContent: {
         header: "A healthy meal delivered to your door, every single day",
         text: "The smart 365-days-per-yer food sub that will make Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        frontImg: frontImg,
       },
       headerAndTextContent1: {
         header1: "Some random heading 1",
@@ -27,6 +29,7 @@ export default class LandingPage extends Component {
     return (
       <div>
         <Hero
+          image={content.heroContent.frontImg}
           text={content.heroContent.text}
           header={content.heroContent.header}
         />
