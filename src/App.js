@@ -9,6 +9,10 @@ import AboutPage from './components/pages/AboutPage';
 import Navigation from './components/molecules/Navigation';
 import Footer from './components/molecules/Footer';
 
+
+import ContentPage from './components/pages/ContentPage';
+
+
 function App() {
 
   return (
@@ -21,7 +25,8 @@ function App() {
         </Route>
 
         <Route path="/Home" exact>
-          <LandingPage />
+          {/* <LandingPage /> */}
+          <ContentPage />
         </Route>
 
         <Route path="/services" exact>

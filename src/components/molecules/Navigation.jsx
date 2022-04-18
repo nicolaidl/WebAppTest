@@ -51,7 +51,9 @@ export default function Navigation(props) {
     <div className="navigation-molecule" css={style}>
       <div className="navigation-container">
         <nav className="navigation-box1">
-          <Link to="/Home" className="btn" activeClassName="a-active-class">
+          <Link to="/Home" className="btn">
+          {/* <Link to="/Home" className="btn" activeClassName="a-active-class"> */}
+          {/* <Link to="/Home" className={(navData) => (navData.isActive ? "a-active-class" : "btn")} > */}
             {/* <Image alt="logo image" image={logo} type="logo" /> */}
             <Text type="p1" tag="p" text={"Nature"} />
             <Text type="p1" tag="p" text={"Art"} />
@@ -65,7 +67,7 @@ export default function Navigation(props) {
               to={object}
               key={i}
               className="btn"
-              activeClassName="a-active-class"
+              // activeClassName="a-active-class"
             >
               <Text type="p1" tag="p" text={object} />
             </NavLink>
