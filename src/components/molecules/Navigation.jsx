@@ -2,17 +2,13 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { css } from "@emotion/react";
-import defaultLogo from "../../images/logo-default.png";
-import Image from "../atoms/Image";
 import Text from "../atoms/Text";
 import logo from "../../images/logo-default.png";
+import Image from "../atoms/Image";
+import defaultLogo from "../../images/logo-default.png";
 
 const style = css`
   * {
-    font-family: "Rubik", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-
     z-index: 1;
   }
 
@@ -37,8 +33,14 @@ const style = css`
     width: 80%;
   }
 
-  .a-active-class {
+  .btn {
     color: #95bcf0;
+    padding-bottom: 0.25rem;
+    border-bottom: 4px solid ##95bcf0;
+  }
+
+  .a-active-class {
+    color: #eeeee4;
     padding-bottom: 0.25rem;
     border-bottom: 4px solid ##95bcf0;
   }
@@ -49,8 +51,11 @@ export default function Navigation(props) {
     <div className="navigation-molecule" css={style}>
       <div className="navigation-container">
         <nav className="navigation-box1">
-          <Link to="/Home" className="btn">
-            <Image alt="logo image" image={logo} type="logo" />
+          <Link to="/Home" className="btn" activeClassName="a-active-class">
+            {/* <Image alt="logo image" image={logo} type="logo" /> */}
+            <Text type="p1" tag="p" text={"Nature"} />
+            <Text type="p1" tag="p" text={"Art"} />
+            <Text type="p1" tag="p" text={"Carpentry"} />
           </Link>
         </nav>
 
@@ -58,8 +63,8 @@ export default function Navigation(props) {
           {props.navs.map((object, i) => (
             <NavLink
               to={object}
-              className="btn"
               key={i}
+              className="btn"
               activeClassName="a-active-class"
             >
               <Text type="p1" tag="p" text={object} />

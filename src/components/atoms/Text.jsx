@@ -12,28 +12,28 @@ const style = css`
 
   .header1 {
     font-size: 52px;
-    margin-bottom: 32px;
+    // margin-bottom: 32px;
   }
 
   .header2 {
     font-size: 44px;
-    margin-bottom: 48px;
+    // margin-bottom: 48px;
   }
 
   .header3 {
     font-size: 40px;
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
   }
 
   .header4 {
     font-size: 32px;
-    margin-bottom: 32px;
+    // margin-bottom: 32px;
   }
 
   .p1 {
     font-size: 20px;
     line-height: 1.6;
-    margin-bottom: 48px;
+    // margin-bottom: 48px;
   }
 `;
 
