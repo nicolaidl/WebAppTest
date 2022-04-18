@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import HeaderAndText from "../molecules/HeaderAndText";
+import HeaderAndText from "../organisms/HeaderAndText";
 import Hero from "../organisms/Hero";
 import frontImg from "../../images/pexels-desk.jpg";
 
@@ -17,7 +17,7 @@ export default class LandingPage extends Component {
         frontImg: frontImg,
       },
       headerAndTextContent1: {
-        header1: "Some random heading 1",
+        header1: "Landing Page",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod atque, cum molestias obcaecati maxime! Esse minima reprehenderit natus maxime saepe autem eveniet exercitationem recusandae quo! Perspiciatis non et nulla?",
       },
       headerAndTextContent2: {
@@ -33,21 +33,21 @@ export default class LandingPage extends Component {
           text={content.heroContent.text}
           header={content.heroContent.header}
         />
-        {/* <HeaderAndText
+        <HeaderAndText
           header1={content.headerAndTextContent1.header1}
           text={content.headerAndTextContent1.text}
           backgroundColor={"#fff"}
           textColor={"#000"}
-        /> */}
+        />
 
-        {/* <section>
+        <section>
           <HeaderAndText
             header2={content.headerAndTextContent2.header2}
             text={content.headerAndTextContent2.text}
             backgroundColor={"#f7f7f7"}
             textColor={"#2E2E2E"}
           />
-        </section> */}
+        </section>
       </div>
     );
   }

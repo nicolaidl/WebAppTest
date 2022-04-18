@@ -4,7 +4,7 @@ import defaultImage from "../../images/default-image.jpg";
 
 export default function Hero(props) {
   return (
-    <div className="hero-component">
+    <div className="hero-organism">
       <HeroMolecule
         image={props.image}
         header={props.header}

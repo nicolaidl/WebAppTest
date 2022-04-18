@@ -4,21 +4,10 @@ import { css } from "@emotion/react";
 import Text from "../atoms/Text";
 
 const style = css`
-  * {
-    margin: 0px;
-    padding: 0px;
-  }
-
   .text-container {
     margin: 0px auto;
     width: 1200px;
     max-width: 100%;
-  }
-
-  section {
-    padding: 96px 0;
-    // background-color: #f7f7f7;
-    // background-color: lightgrey;
   }
 `;
 

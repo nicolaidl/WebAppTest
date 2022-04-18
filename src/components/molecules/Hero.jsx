@@ -23,8 +23,8 @@ const style = css`
   header {
     height: 100vh;
     position: relative;
-    // transform: translate(0%, -5%);
-    color: #fff;
+    color: rgba(34, 34, 34, 0.6);
+    background-size: cover;
   }
 
   .header-container {
@@ -78,6 +78,7 @@ const style = css`
   }
 
   .pickgradient {
+    height: 100%;
     display: inline-block;
     background: -moz-linear-gradient(
       top,
@@ -123,27 +124,25 @@ const style = css`
 export default function Hero(props) {
   return (
     <div css={style} className="hero-molecule">
-      <div css={style}>
-        <header>
-          <div className="pickgradient">
-            <Image image={props.image} type="hero" alt="A desk full of tools" />
-          </div>
+      <header>
+        <div className="pickgradient">
+          <Image image={props.image} type="hero" alt="A desk full of tools" />
+        </div>
 
-          <div className="header-container">
-            <div className="header-container-inner">
-              <HeaderAndText
-                header1={props.header}
-                text={props.text}
-                textColor={"#fff"}
-              />
+        <div className="header-container">
+          <div className="header-container-inner">
+            <HeaderAndText
+              header1={props.header}
+              text={props.text}
+              textColor={"#fff"}
+            />
 
-              <Link to="/Services" className="btn">
-                {"See all services"}
-              </Link>
-            </div>
+            <Link to="/Services" className="btn">
+              {"See all services"}
+            </Link>
           </div>
-        </header>
-      </div>
+        </div>
+      </header>
     </div>
   );
 }
