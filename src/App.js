@@ -8,6 +8,7 @@ import ServicesPage from './components/pages/ServicesPage';
 import AboutPage from './components/pages/AboutPage';
 import Navigation from './components/molecules/Navigation';
 import Footer from './components/molecules/Footer';
+import Spacer from './components/atoms/Spacer';
 
 
 import ContentPage from './components/pages/ContentPage';
@@ -18,6 +19,8 @@ function App() {
   return (
     <div className='app' style={{ position: "relative" }}>
       <Navigation />
+      
+
 
       <Switch>
         <Route path="/" exact>
@@ -25,8 +28,8 @@ function App() {
         </Route>
 
         <Route path="/Home" exact>
-          {/* <LandingPage /> */}
-          <ContentPage />
+          <LandingPage />
+          {/* <ContentPage /> */}
         </Route>
 
         <Route path="/services" exact>

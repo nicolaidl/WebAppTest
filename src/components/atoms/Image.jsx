@@ -4,22 +4,28 @@ import defaultImage from "../../images/default-image.jpg";
 import { css } from "@emotion/react";
 
 const style = css`
-    .image-hero {
-      width: 100%;
-      width: 100%;
-    }
-    .image-logo {
-      width: 50px;
-      width: 50px
-    }
-    .default{
-      width: "300px";
-      height: "300px";
-    }
-    .standard: {
-      width: "300px";
-      height: "300px";
-    },
+  .image-hero {
+    // height: 100vh;
+    // // width: 100%;
+    // size: cover;
+    // overflow: hidden;
+    // max-height: 100vh;
+  
+    object-fit: cover;
+  width: 100%;
+  }
+  .image-logo {
+    width: 50px;
+    width: 50px;
+  }
+  .default {
+    width: "300px";
+    height: "300px";
+  }
+  .standard: {
+    width: "300px";
+    height: "300px";
+  }
 `;
 
 export default function Image(props) {

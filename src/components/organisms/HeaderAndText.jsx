@@ -2,10 +2,22 @@
 import React from "react";
 import { css } from "@emotion/react";
 import HeaderAndTextMolecule from "../molecules/HeaderAndText";
+import Spacer from "../atoms/Spacer";
 
 const style = css`
   .header-and-text-organism-container {
-    padding: 100px;
+    @media (min-width: 1201px) {
+      padding-top: 5em;
+    }
+
+    @media (max-width: 1200px) {
+      padding-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      padding-top: 1em;
+    }
+
   }
 `;
 
@@ -16,17 +28,19 @@ export default function HeaderAndText(props) {
   };
 
   return (
-    <div css={style} className="header-and-text-organism" style={colorStyle}>
-      <div className="header-and-text-organism-container">
-        <HeaderAndTextMolecule
-          header1={props.header1}
-          header2={props.header2}
-          header3={props.header3}
-          header4={props.header4}
-          text={props.text}
-        />
+    <Spacer>
+      <div css={style} className="header-and-text-organism" style={colorStyle}>
+        <div className="header-and-text-organism-container">
+          <HeaderAndTextMolecule
+            header1={props.header1}
+            header2={props.header2}
+            header3={props.header3}
+            header4={props.header4}
+            text={props.text}
+          />
+        </div>
       </div>
-    </div>
+    </Spacer>
   );
 }
 

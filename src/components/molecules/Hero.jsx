@@ -17,18 +17,18 @@ const style = css`
 
   .container {
     margin: 0px auto;
-    width: 1200px;
+    max-width: 100%;
   }
 
   header {
     height: 100vh;
     position: relative;
     color: rgba(34, 34, 34, 0.6);
-    background-size: cover;
+    // background-size: cover;
   }
 
   .header-container {
-    width: 1200px;
+    max-width: 100%;
     position: absolute;
     /*in relation to Parent size*/
     left: 15%;
@@ -78,7 +78,8 @@ const style = css`
   }
 
   .pickgradient {
-    height: 100%;
+    // height: 100%;
+    height: 100vh;
     display: inline-block;
     background: -moz-linear-gradient(
       top,

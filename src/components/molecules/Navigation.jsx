@@ -14,29 +14,35 @@ const style = css`
 
   .navigation-container {
     position: absolute;
+    left: 0;
     display: flex;
 
-    width: 100%;
-    width: 1200px;
+
+    max-width: 80%;
 
     padding-top: 32px;
-    left: 18.5%;
+    padding-bottom: 0.25rem;
+    border-bottom: 4px solid ##95bcf0;
+    margin: 0 15%;
   }
 
   .navigation-box1 {
     display: flex;
+    margin-right: 100%;
   }
 
   .navigation-box2 {
     display: flex;
     justify-content: space-evenly;
-    width: 80%;
   }
 
   .btn {
     color: #95bcf0;
-    padding-bottom: 0.25rem;
-    border-bottom: 4px solid ##95bcf0;
+  }
+
+  .link {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .a-active-class {
@@ -48,12 +54,16 @@ const style = css`
 
 export default function Navigation(props) {
   return (
-    <div className="navigation-molecule" css={style}>
+    <div
+      className="navigation-molecule"
+      css={style}
+      style={{ position: "absolute;" }}
+    >
       <div className="navigation-container">
         <nav className="navigation-box1">
           <Link to="/Home" className="btn">
-          {/* <Link to="/Home" className="btn" activeClassName="a-active-class"> */}
-          {/* <Link to="/Home" className={(navData) => (navData.isActive ? "a-active-class" : "btn")} > */}
+            {/* <Link to="/Home" className="btn" activeClassName="a-active-class"> */}
+            {/* <Link to="/Home" className={(navData) => (navData.isActive ? "a-active-class" : "btn")} > */}
             {/* <Image alt="logo image" image={logo} type="logo" /> */}
             <Text type="p1" tag="p" text={"Nature"} />
             <Text type="p1" tag="p" text={"Art"} />
@@ -66,7 +76,7 @@ export default function Navigation(props) {
             <NavLink
               to={object}
               key={i}
-              className="btn"
+              className="link btn"
               // activeClassName="a-active-class"
             >
               <Text type="p1" tag="p" text={object} />
