@@ -5,14 +5,8 @@ import { css } from "@emotion/react";
 
 const style = css`
   .image-hero {
-    // height: 100vh;
-    // // width: 100%;
-    // size: cover;
-    // overflow: hidden;
-    // max-height: 100vh;
-  
     object-fit: cover;
-  width: 100%;
+    width: 100%;
   }
   .image-logo {
     width: 50px;

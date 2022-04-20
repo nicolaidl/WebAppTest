@@ -15,13 +15,13 @@ const style = css`
     }
 
     @media (max-width: 1200px) {
-      margin-left: 3em;
-      margin-right: 3rem;
+      padding-left: 3em;
+      padding-right: 3rem;
     }
 
     @media (max-width: 600px) {
-      margin-left: 1em;
-      margin-right: 1rem;
+      padding-left: 1em;
+      padding-right: 1rem;
     }
   }
 `;

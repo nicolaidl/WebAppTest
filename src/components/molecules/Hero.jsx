@@ -125,7 +125,8 @@ const style = css`
 export default function Hero(props) {
   return (
     <div css={style} className="hero-molecule">
-      <header>
+        <header>
+
         <div className="pickgradient">
           <Image image={props.image} type="hero" alt="A desk full of tools" />
         </div>
