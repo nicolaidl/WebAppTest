@@ -8,28 +8,31 @@ const style = css`
     background-color: white;
 
     @media (min-width: 1201px) {
-      // margin-left: 5em;
-      // margin-right: 5rem;
-      padding-left: 5em;
-      padding-right: 5rem;
+      padding-left: 8em;
+      padding-right: 8rem;
     }
 
     @media (max-width: 1200px) {
-      padding-left: 3em;
-      padding-right: 3rem;
+      padding-left: 4em;
+      padding-right: 4rem;
     }
 
     @media (max-width: 600px) {
-      padding-left: 1em;
-      padding-right: 1rem;
+      padding-left: 2em;
+      padding-right: 2rem;
     }
   }
 `;
 
 export default function Spacer(props) {
+  let divStyle = {
+    backgroundColor: `${props.backgroundColor}`,
+    color: `${props.textColor}`,
+  };
+
   return (
     <div css={style}>
-      <div className="spacer-atom" css={style}>
+      <div className="spacer-atom" style={divStyle}>
         {props.children}
       </div>
     </div>
@@ -38,4 +41,6 @@ export default function Spacer(props) {
 
 Spacer.defaultProps = {
   children: <h1>Default Content</h1>,
+  text: "Default text",
+  textColor: "#8A8A8A",
 };

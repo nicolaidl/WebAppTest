@@ -21,6 +21,9 @@ const style = css`
   }
 
   header {
+    flex-flow: column wrap;
+    overflow: hidden;
+    max-width: 100%;
     height: 100vh;
     position: relative;
     color: rgba(34, 34, 34, 0.6);
@@ -44,21 +47,17 @@ const style = css`
     width: 50%;
   }
 
-  h1 {
-    font-size: 52px;
-    margin-bottom: 32px;
-  }
+  // h1 {
+  //   margin-bottom: 32px;
+  // }
 
-  h2 {
-    font-size: 44px;
-    margin-bottom: 48px;
-  }
+  // h2 {
+  //   margin-bottom: 48px;
+  // }
 
-  p {
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 48px;
-  }
+  // p {
+  //   margin-bottom: 48px;
+  // }
 
   section {
     padding: 96px 0;
@@ -140,7 +139,7 @@ export default function Hero(props) {
             />
 
             <Link to="/Services" className="btn">
-              {"See all services"}
+              {"See all services "}&rarr;
             </Link>
           </div>
         </div>

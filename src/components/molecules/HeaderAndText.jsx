@@ -9,16 +9,36 @@ const style = css`
     width: 1200px;
     max-width: 100%;
   }
+
+  @media (min-width: 1201px) {
+    h1 {
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      margin-bottom: 48px;
+    }
+
+    // p {
+    //   margin-bottom: 48px;
+    // }
+  }
+
+  @media (max-width: 1200px) {
+  }
+
+  @media (max-width: 600px) {
+  }
 `;
 
 export default function HeaderAndText(props) {
-  let divStyle = {
-    backgroundColor: `${props.backgroundColor}`,
-    color: `${props.textColor}`,
-  };
+  // let divStyle = {
+  //   backgroundColor: `${props.backgroundColor}`,
+  //   color: `${props.textColor}`,
+  // };
 
   return (
-    <div css={style} className="header-and-text-molecule" style={divStyle}>
+    <div css={style} className="header-and-text-molecule" >
       <div className="text-container">
         {props.header1 ? (
           <Text tag="h1" type="header1" text={props.header1} />
@@ -57,6 +77,6 @@ HeaderAndText.defaultProps = {
   // header3: "Default Header 3",
   // header4: "Default Header 4",
   // backgroundColor: "#fff",
-  text: "Default text",
-  textColor: "#8A8A8A",
+  // text: "Default text",
+  // textColor: "#8A8A8A",
 };

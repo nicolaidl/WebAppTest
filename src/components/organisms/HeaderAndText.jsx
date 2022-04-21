@@ -7,11 +7,14 @@ import Spacer from "../atoms/Spacer";
 const style = css`
   .header-and-text-organism-container {
     @media (min-width: 1201px) {
-      padding-top: 5em;
+      padding-top: 8rem;
+      margin-top: 8rem;
+      
     }
 
     @media (max-width: 1200px) {
       padding-top: 3rem;
+      margin-top: 5rem;
     }
 
     @media (max-width: 600px) {
@@ -28,8 +31,8 @@ export default function HeaderAndText(props) {
   };
 
   return (
-    <Spacer>
-      <div css={style} className="header-and-text-organism" style={colorStyle}>
+    <Spacer css={style} backgroundColor={props.backgroundColor}>
+      <div css={style} className="header-and-text-organism" > 
         <div className="header-and-text-organism-container">
           <HeaderAndTextMolecule
             header1={props.header1}
