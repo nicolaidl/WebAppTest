@@ -9,8 +9,7 @@ const style = css`
     width: 100%;
   }
   .image-logo {
-    width: 50px;
-    width: 50px;
+    height: 6.2rem;
   }
   .default {
     width: "300px";

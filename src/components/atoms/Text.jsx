@@ -37,6 +37,16 @@ const style = css`
     font-size: 2rem;
     line-height: 1.6;
   }
+
+  .p-nav-main {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.6;
+  
+    @media (max-width: 59rem) {
+    font-size:3rem;
+      
+  }
 `;
 
 export default function Text(props) {

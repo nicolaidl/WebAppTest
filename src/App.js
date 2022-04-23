@@ -6,7 +6,7 @@ import LandingPage from './components/pages/LandingPage';
 import ContactPage from './components/pages/ContactPage';
 import ServicesPage from './components/pages/ServicesPage';
 import AboutPage from './components/pages/AboutPage';
-import Navigation from './components/molecules/Navigation';
+import Navigation from './components/organisms/Navigation';
 import Footer from './components/molecules/Footer';
 import Spacer from './components/atoms/Spacer';
 
@@ -23,14 +23,16 @@ function App() {
 
 
       <Switch>
-        <Route path="/" exact>
+        {/* <Route path="/" exact>
           <Redirect to="/Home" />
-        </Route>
+        </Route> */}
 
-        <Route path="/Home" exact>
+        {/* <Route path="/Home" exact>
           <LandingPage />
+        </Route> */}
+
           {/* <ContentPage /> */}
-        </Route>
+
 
         <Route path="/services" exact>
           <ServicesPage />
