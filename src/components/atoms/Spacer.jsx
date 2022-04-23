@@ -29,7 +29,6 @@ export default function Spacer(props) {
     backgroundColor: `${props.backgroundColor}`,
     color: `${props.textColor}`,
   };
-  console.log(props);
 
   return (
     <div css={style} style={props.style}>

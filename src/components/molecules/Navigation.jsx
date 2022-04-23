@@ -163,10 +163,9 @@ export default function Navigation(props) {
           <div className="main-nav">
             <ul className="main-nav-list">
               {props.navs.map((object, i) => (
-                <li>
+                <li key={i} onClick={() => setMobileNavigationIsOpen(false)}>
                   <NavLink
                     to={object}
-                    key={i}
                     // className="link btn"
                     className="main-nav-link"
                     // className="link btn"

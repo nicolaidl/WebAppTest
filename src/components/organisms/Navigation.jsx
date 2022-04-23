@@ -4,37 +4,50 @@ import { css } from "@emotion/react";
 import NavigationMolecule from "../molecules/Navigation";
 import Spacer from "../atoms/Spacer";
 
+// const style = css`
+//   .navigation-organism {
+//     @media (min-width: 1201px) {
+//       padding-top: 6rem;
+//       margin-top: 6rem;
+//     }
+
+//     @media (max-width: 1200px) {
+//       padding-top: 3rem;
+//       margin-top: 3rem;
+//     }
+
+//     @media (max-width: 600px) {
+//       padding-top: 1em;
+//       margin-top: 1rem;
+//     }
+//   }
+// `;
+
 const style = css`
-  @media (min-width: 1201px) {
-    padding-top: 6rem;
-    margin-top: 6rem;
-  }
+  .navigation-organism-container {
+    @media (min-width: 1201px) {
+      padding-top: 1em;
+    }
 
-  @media (max-width: 1200px) {
-    padding-top: 3rem;
-    margin-top: 3rem;
-  }
+    @media (max-width: 1200px) {
+      padding-top: 1em;
+    }
 
-  @media (max-width: 600px) {
-    padding-top: 1em;
-    margin-top: 1rem;
+    @media (max-width: 600px) {
+      padding-top: 1em;
+    }
   }
 `;
 
 export default function Navigation(props) {
-  let colorStyle = {
-    // backgroundColor: `${props.backgroundColor}`,
-    color: `${props.textColor}`,
-  };
-
   return (
-    <Spacer type={{ position: "absolute" }} css={style}>
-      <div className="navigation-organism">
+    // <Spacer css={style}>
+      <div css={style} className="navigation-organism">
         <div className="navigation-organism-container">
           <NavigationMolecule />
         </div>
       </div>
-    </Spacer>
+    // </Spacer>
   );
 }
 
