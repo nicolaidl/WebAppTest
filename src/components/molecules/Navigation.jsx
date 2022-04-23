@@ -6,6 +6,7 @@ import Text from "../atoms/Text";
 import logo from "../../images/logo-default.png";
 import Image from "../atoms/Image";
 import defaultLogo from "../../images/logo-default.png";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const style = css`
   * {
@@ -16,7 +17,6 @@ const style = css`
     position: absolute;
     left: 0;
     display: flex;
-
 
     max-width: 80%;
 
@@ -49,6 +49,31 @@ const style = css`
     color: #eeeee4;
     padding-bottom: 0.25rem;
     border-bottom: 4px solid ##95bcf0;
+  }
+
+  .btn-mobile-nav {
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    @media (max-width: 59rem) {
+      display: block;
+    }
+  }
+
+  .icon-mobile-nav {
+    color: #333;
+    height: 4.8rem;
+    width: 4.8rem;
+  }
+
+  .icon-mobile-nav[name="close-outline"] {
+    display: none;
+  }
+
+  .icon-mobile-nav[name="men-outline"] {
+    display: none;
   }
 `;
 
@@ -84,6 +109,11 @@ export default function Navigation(props) {
           ))}
         </nav>
       </div>
+
+      <button className="btn-mobile-nav">
+        <AiOutlineMenu className="icon-mobile-nav" name="menu-outline" />
+        <AiOutlineClose className="icon-mobile-nav" name="close-outline" />
+      </button>
     </div>
   );
 }

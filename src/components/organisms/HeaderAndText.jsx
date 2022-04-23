@@ -7,18 +7,18 @@ import Spacer from "../atoms/Spacer";
 const style = css`
   .header-and-text-organism-container {
     @media (min-width: 1201px) {
-      padding-top: 8rem;
-      margin-top: 8rem;
-      
+      padding-top: 6rem;
+      margin-top: 6rem;
     }
 
     @media (max-width: 1200px) {
       padding-top: 3rem;
-      margin-top: 5rem;
+      margin-top: 3rem;
     }
 
     @media (max-width: 600px) {
       padding-top: 1em;
+      margin-top: 1rem;
     }
 
   }
@@ -26,13 +26,14 @@ const style = css`
 
 export default function HeaderAndText(props) {
   let colorStyle = {
-    backgroundColor: `${props.backgroundColor}`,
+    // backgroundColor: `${props.backgroundColor}`,
     color: `${props.textColor}`,
   };
 
   return (
-    <Spacer css={style} backgroundColor={props.backgroundColor}>
-      <div css={style} className="header-and-text-organism" > 
+
+    <Spacer css={style} backgroundColor={props.backgroundColor} >
+      <div className="header-and-text-organism"> 
         <div className="header-and-text-organism-container">
           <HeaderAndTextMolecule
             header1={props.header1}

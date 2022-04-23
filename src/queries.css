@@ -1,8 +1,41 @@
-
-
-@media (max-width: 84em){
-  .hero {
+/* Small desktops */
+@media (max-width: 84rem) {
+  /* .hero {
     max-width: 120em;
+  } */
+}
+
+/* Tablets*/
+@media (max-width: 75rem) {
+  html {
+    /* font-size: 9px / 16px */
+    font-size: 56.25%;
+  }
+}
+
+/* Below 944px - Tablets*/
+@media (max-width: 59rem) {
+  html {
+    /* font-size: 8px / 16px */
+    font-size: 5%;
+  }
+}
+
+/* Below 944px - Tablets*/
+/* Calculation: */
+@media (max-width: 59rem) {
+  html {
+    /* font-size: 8px / 16px */
+    font-size: 5%;
+  }
+}
+
+/* Below 944px - Tablets*/
+/* Calculation: */
+@media (max-width: 59rem) {
+  html {
+    /* font-size: 8px / 16px */
+    font-size: 5%;
   }
 }
 

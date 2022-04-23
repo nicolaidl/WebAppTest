@@ -32,14 +32,14 @@ const style = css`
 `;
 
 export default function HeaderAndText(props) {
-  // let divStyle = {
-  //   backgroundColor: `${props.backgroundColor}`,
-  //   color: `${props.textColor}`,
-  // };
+  let divStyle = {
+    backgroundColor: `${props.backgroundColor}`,
+    color: `${props.textColor}`,
+  };
 
   return (
     <div css={style} className="header-and-text-molecule" >
-      <div className="text-container">
+      <div className="text-container" style={divStyle}>
         {props.header1 ? (
           <Text tag="h1" type="header1" text={props.header1} />
         ) : (

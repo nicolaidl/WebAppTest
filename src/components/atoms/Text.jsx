@@ -11,6 +11,10 @@ const style = css`
   .header1 {
     // font-size: 52px;
     font-size: 5.2rem;
+
+    @media (max-width: 75rem) {
+      font-size: 4.4rem;
+    }
   }
 
   .header2 {
