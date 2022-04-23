@@ -10,14 +10,14 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const style = css`
   * {
-    z-index: 1;
+    z-index: 99;
   }
 
   .navigation-container {
+    z-index: 99;
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding-top: 32px;
     padding-bottom: 0.25rem;
     border-bottom: 4px solid ##95bcf0;
   }

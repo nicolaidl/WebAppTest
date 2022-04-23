@@ -29,9 +29,10 @@ export default function Spacer(props) {
     backgroundColor: `${props.backgroundColor}`,
     color: `${props.textColor}`,
   };
+  console.log(props);
 
   return (
-    <div css={style}>
+    <div css={style} style={props.style}>
       <div className="spacer-atom" style={divStyle}>
         {props.children}
       </div>
@@ -43,4 +44,5 @@ Spacer.defaultProps = {
   children: <h1>Default Content</h1>,
   text: "Default text",
   textColor: "#8A8A8A",
+  style: {},
 };
