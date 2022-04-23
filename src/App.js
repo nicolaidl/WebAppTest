@@ -19,20 +19,19 @@ function App() {
   return (
     <div className='app' style={{ position: "relative" }}>
       <Navigation />
-      
+
 
 
       <Switch>
-        {/* <Route path="/" exact>
+        {/* <ContentPage /> */}
+
+        <Route path="/" exact>
           <Redirect to="/Home" />
-        </Route> */}
+        </Route>
 
-        {/* <Route path="/Home" exact>
+        <Route path="/Home" exact>
           <LandingPage />
-        </Route> */}
-
-          {/* <ContentPage /> */}
-
+        </Route>
 
         <Route path="/services" exact>
           <ServicesPage />

@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { css } from "@emotion/react";
 import Text from "../atoms/Text";
@@ -14,6 +14,7 @@ const style = css`
   }
 
   .navigation-container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding-top: 32px;
@@ -27,6 +28,7 @@ const style = css`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 999;
   }
 
   .main-nav-list {
@@ -64,14 +66,6 @@ const style = css`
     height: 4.4rem;
   }
 
-  // .icon-mobile-nav[name="close-outline"] {
-  //   display: none;
-  // }
-
-  // .icon-mobile-nav[name="men-outline"] {
-  //   display: none;
-  // }
-
   .btn-mobile-nav {
     display: none;
     border: none;
@@ -88,13 +82,14 @@ const style = css`
   @media (max-width: 59rem) {
     .btn-mobile-nav {
       display: block;
+      z-index: 9999;
     }
 
     .icon-mobile-nav[name="close-outline"] {
       display: none;
     }
 
-    .icon-mobile-nav[name="men-outline"] {
+    .icon-mobile-nav[name="menu-outline"] {
       display: block;
     }
 
@@ -110,7 +105,7 @@ const style = css`
     .main-nav {
       background-color: rgba(255, 255, 255, 0.97);
       position: absolute;
-      top: 0;
+      top: 50%;
       left: 0;
       width: 100%;
       height: 100vh;
@@ -118,21 +113,46 @@ const style = css`
       align-itms: center;
       justify-content: center;
 
+      /* complete hiding*/
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+      transform: translateX(100%);
     }
 
-    // .btn-mobile-nav {
-    //   // display: none;
-    //   border: none;
-    //   background: none;
-    //   cursor: pointer;
-    // }
+    .nav-open .main-nav {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+      transform: translateX(0);
+      transition: all 0.5s ease-in;
+    }
+
+    .nav-open .icon-mobile-nav[name="close-outline"] {
+      display: block;
+    }
+
+    .nav-open .icon-mobile-nav[name="menu-outline"] {
+      display: none;
+    }
   }
 `;
 
 export default function Navigation(props) {
+  const [mobileNavigationIsOpen, setMobileNavigationIsOpen] = useState(false);
+
+  let clickOnBtnMobileNav = () => {
+    setMobileNavigationIsOpen(!mobileNavigationIsOpen);
+  };
+
   return (
     <div className="navigation-molecule" css={style}>
-      <div className="navigation-container">
+      {/* <div className="navigation-container "> */}
+      <div
+        className={`navigation-container ${
+          mobileNavigationIsOpen ? "nav-open" : ""
+        }`}
+      >
         <nav className="navigation-box1">
           <Link to="/Home" className="main-nav-link">
             <Image alt="logo image" image={logo} type="logo" />
@@ -159,7 +179,7 @@ export default function Navigation(props) {
             </ul>
           </div>
 
-          <button className="btn-mobile-nav">
+          <button className="btn-mobile-nav" onClick={clickOnBtnMobileNav}>
             <AiOutlineMenu className="icon-mobile-nav" name="menu-outline" />
             <AiOutlineClose className="icon-mobile-nav" name="close-outline" />
           </button>
