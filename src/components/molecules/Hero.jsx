@@ -20,10 +20,13 @@ const style = css`
   }
 
   header {
+    @media (min-width: 1200px) {
+      height: 100vh;
+    }
+
     flex-flow: column wrap;
     overflow: hidden;
     max-width: 100%;
-    height: 100vh;
     position: relative;
     color: rgba(34, 34, 34, 0.6);
   }
@@ -34,15 +37,16 @@ const style = css`
     /*in relation to Parent size*/
     // left: 15%;
     left: 5%;
+    right: 5%;
     top: 40%;
 
-    // @media (max-width: 1200px) {
-    //   left: 10%;
-    // }
+    @media (max-width: 1200px) {
+      top: 30%;
+    }
 
-    // @media (max-width: 600px) {
-    //   left: 5%;
-    // }
+    @media (max-width: 600px) {
+      top: 20%;
+    }
 
     /*in relation to ELEMENT size*/
     // transform: translate(-50%, -50%);
@@ -82,7 +86,7 @@ const style = css`
 
   .pickgradient {
     // height: 100%;
-    height: 100vh;
+    // height: 100vh;
     display: inline-block;
     background: -moz-linear-gradient(
       top,

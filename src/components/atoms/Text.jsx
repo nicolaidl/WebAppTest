@@ -15,6 +15,16 @@ const style = css`
     @media (max-width: 75rem) {
       font-size: 4.4rem;
     }
+
+    
+    @media (max-width: 1200px) {
+      max-width: 60%;
+    }
+
+    @media (max-width: 600px) {
+      max-width: 100%;
+      width: 400px;
+    }
   }
 
   .header2 {

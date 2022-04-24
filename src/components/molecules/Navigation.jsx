@@ -169,7 +169,7 @@ export default function Navigation(props) {
                     // className="link btn"
                     className="main-nav-link"
                     // className="link btn"
-                    // activeClassName="a-active-class"
+                     activeClassName="a-active-class"
                   >
                     <Text type="p-nav-main" tag="p" text={object} />
                   </NavLink>
