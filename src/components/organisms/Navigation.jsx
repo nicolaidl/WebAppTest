@@ -32,6 +32,7 @@ const style = css`
     @media (max-width: 1200px) {
       padding-top: 1em;
     }
+    
 
     @media (max-width: 600px) {
       padding-top: 1em;
