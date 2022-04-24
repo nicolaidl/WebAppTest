@@ -5,22 +5,19 @@ import HeaderAndTextMolecule from "../molecules/HeaderAndText";
 import Spacer from "../atoms/Spacer";
 
 const style = css`
-  .header-and-text-organism-container {
-    @media (min-width: 1201px) {
-      padding-top: 6rem;
-      margin-top: 6rem;
-    }
+  .spacer-atom {
+    padding-top: 3.2rem;
+    margin-top: 3.2rem;
 
     @media (max-width: 1200px) {
-      padding-top: 3rem;
-      margin-top: 3rem;
+      padding-top: 2.4rem;
+      margin-top: 2.4rem;
     }
 
     @media (max-width: 600px) {
-      padding-top: 1em;
-      margin-top: 1rem;
+      padding-top: 1.6rem;
+      margin-top: 1.6rem;
     }
-
   }
 `;
 
@@ -31,9 +28,8 @@ export default function HeaderAndText(props) {
   };
 
   return (
-
-    <Spacer css={style} backgroundColor={props.backgroundColor} >
-      <div className="header-and-text-organism"> 
+    <div css={style} className="header-and-text-organism">
+      <Spacer backgroundColor={props.backgroundColor}>
         <div className="header-and-text-organism-container">
           <HeaderAndTextMolecule
             header1={props.header1}
@@ -43,8 +39,8 @@ export default function HeaderAndText(props) {
             text={props.text}
           />
         </div>
-      </div>
-    </Spacer>
+      </Spacer>
+    </div>
   );
 }
 

@@ -32,7 +32,6 @@ const style = css`
     @media (max-width: 1200px) {
       padding-top: 1em;
     }
-    
 
     @media (max-width: 600px) {
       padding-top: 1em;
@@ -42,13 +41,13 @@ const style = css`
 
 export default function Navigation(props) {
   return (
-    // <Spacer css={style}>
-      <div css={style} className="navigation-organism">
+    <Spacer css={style} style={{ position: "" }}>
+      <div className="navigation-organism">
         <div className="navigation-organism-container">
           <NavigationMolecule />
         </div>
       </div>
-    // </Spacer>
+    </Spacer>
   );
 }
 
