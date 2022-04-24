@@ -11,7 +11,6 @@ const style = css`
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: "Rubik", sans-serif;
     max-width: 100%;
   }
 
