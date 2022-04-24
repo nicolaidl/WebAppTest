@@ -27,15 +27,23 @@ const style = css`
     height: 100vh;
     position: relative;
     color: rgba(34, 34, 34, 0.6);
-    // background-size: cover;
   }
 
   .header-container {
     max-width: 100%;
     position: absolute;
     /*in relation to Parent size*/
-    left: 15%;
+    // left: 15%;
+    left: 5%;
     top: 40%;
+
+    // @media (max-width: 1200px) {
+    //   left: 10%;
+    // }
+
+    // @media (max-width: 600px) {
+    //   left: 5%;
+    // }
 
     /*in relation to ELEMENT size*/
     // transform: translate(-50%, -50%);
@@ -44,20 +52,17 @@ const style = css`
   }
 
   .header-container-inner {
-    width: 50%;
+    max-width: 50%;
+
+    @media (max-width: 1200px) {
+      max-width: 60%;
+    }
+
+    @media (max-width: 600px) {
+      max-width: 100%;
+      width: 400px;
+    }
   }
-
-  // h1 {
-  //   margin-bottom: 32px;
-  // }
-
-  // h2 {
-  //   margin-bottom: 48px;
-  // }
-
-  // p {
-  //   margin-bottom: 48px;
-  // }
 
   section {
     padding: 96px 0;
@@ -119,13 +124,16 @@ const style = css`
     position: relative;
     z-index: -1;
   }
+
+  .header-and-text-molecule {
+    margin-bottom: 1.2rem;
+  }
 `;
 
 export default function Hero(props) {
   return (
     <div css={style} className="hero-molecule">
-        <header>
-
+      <header>
         <div className="pickgradient">
           <Image image={props.image} type="hero" alt="A desk full of tools" />
         </div>

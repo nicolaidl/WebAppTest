@@ -10,24 +10,56 @@ const style = css`
     max-width: 100%;
   }
 
-  @media (min-width: 1201px) {
-    h1 {
-      margin-bottom: 32px;
-    }
+  h1 {
+    margin-bottom: 3.2rem;
+  }
 
-    h2 {
-      margin-bottom: 48px;
-    }
+  h2 {
+    margin-bottom: 4.8rem;
+  }
 
-    // p {
-    //   margin-bottom: 48px;
-    // }
+  h3 {
+    margin-bottom: 2.4rem;
+  }
+
+  h4 {
+    margin-bottom: 2.4rem;
   }
 
   @media (max-width: 1200px) {
+    h1 {
+      margin-bottom: 3.2rem;
+    }
+
+    h2 {
+      margin-bottom: 4.8rem;
+    }
+
+    h3 {
+      margin-bottom: 2.4rem;
+    }
+
+    h4 {
+      margin-bottom: 2.4rem;
+    }
   }
 
   @media (max-width: 600px) {
+    h1 {
+      margin-bottom: 3.2rem;
+    }
+
+    h2 {
+      margin-bottom: 4.8rem;
+    }
+
+    h3 {
+      margin-bottom: 2.4rem;
+    }
+
+    h4 {
+      margin-bottom: 2.4rem;
+    }
   }
 `;
 
@@ -38,7 +70,7 @@ export default function HeaderAndText(props) {
   };
 
   return (
-    <div css={style} className="header-and-text-molecule" >
+    <div css={style} className="header-and-text-molecule">
       <div className="text-container" style={divStyle}>
         {props.header1 ? (
           <Text tag="h1" type="header1" text={props.header1} />
