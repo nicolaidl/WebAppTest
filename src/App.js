@@ -49,6 +49,10 @@ function App() {
           <ServicesPage />
         </Route>
 
+        <Route path="/work-done" exact>
+          <WorkDonePage />
+        </Route>
+
         <Route path="/contact" exact>
           <ContactPage />
         </Route>

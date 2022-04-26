@@ -4,25 +4,6 @@ import { css } from "@emotion/react";
 import NavigationMolecule from "../molecules/Navigation";
 import Spacer from "../atoms/Spacer";
 
-// const style = css`
-//   .navigation-organism {
-//     @media (min-width: 1201px) {
-//       padding-top: 6rem;
-//       margin-top: 6rem;
-//     }
-
-//     @media (max-width: 1200px) {
-//       padding-top: 3rem;
-//       margin-top: 3rem;
-//     }
-
-//     @media (max-width: 600px) {
-//       padding-top: 1em;
-//       margin-top: 1rem;
-//     }
-//   }
-// `;
-
 const style = css`
   .navigation-organism-container {
     @media (min-width: 1201px) {
@@ -41,13 +22,11 @@ const style = css`
 
 export default function Navigation(props) {
   return (
-    <Spacer css={style} style={{ position: "" }}>
-      <div className="navigation-organism">
-        <div className="navigation-organism-container">
-          <NavigationMolecule />
-        </div>
+    <div className="navigation-organism spacer" css={style}>
+      <div className="navigation-organism-container">
+        <NavigationMolecule />
       </div>
-    </Spacer>
+    </div>
   );
 }
 

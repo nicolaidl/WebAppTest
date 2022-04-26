@@ -1,22 +1,37 @@
 import React, { Component } from "react";
-import GridContent from "../organisms/Grid2Columns";
+import Grid2ColImageAndText from "../organisms/ImageAndText";
+import Image from "../atoms/Image";
 import HeaderAndText from "../organisms/HeaderAndText";
+import img1 from "../../images/work-done1.jpg";
+import img2 from "../../images/work-done2.jpg";
+import img3 from "../../images/work-done3.jpg";
 
+import Grid from "../atoms/Grid";
+import ImageAndText from "../molecules/ImageAndText";
 
 export default class WorkDonePage extends Component {
   render() {
     let content = {
       headerAndTextContent1: {
         header1: "Work Done Page",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod atque, cum molestias obcaecati maxime! Esse minima reprehenderit natus maxime saepe autem eveniet exercitationem recusandae quo! Perspiciatis non et nulla?",
+        text: "This page is for showcasing some projects.",
       },
-      headerAndTextContent2: {
-        header2: "Some random heading 2",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod atque, cum molestias obcaecati maxime! Esse minima reprehenderit natus maxime saepe autem eveniet exercitationem recusandae quo! Perspiciatis non et nulla?",
+      text1: {
+        header: "Step 1",
+        text: "Work work 1",
+      },
+      text2: {
+        header: "Step 2",
+        text: "Work work 2",
+      },
+      text3: {
+        header: "Step 3",
+        text: "Work work 3",
       },
     };
+
     return (
-      <div style={{ paddingTop: "150px" }}>
+      <div style={{ paddingTop: "50px" }}>
         <HeaderAndText
           header1={content.headerAndTextContent1.header1}
           text={content.headerAndTextContent1.text}
@@ -25,7 +40,22 @@ export default class WorkDonePage extends Component {
         />
 
         <section>
-          <GridContent />
+          <ImageAndText
+            image={img1}
+            text={content.text1.text}
+            header={content.text1.header}
+          />
+          <ImageAndText
+            type="imageFirst"
+            image={img2}
+            text={content.text2.text}
+            header={content.text2.header}
+          />
+          <ImageAndText
+            image={img3}
+            text={content.text3.text}
+            header={content.text3.header}
+          />
         </section>
       </div>
     );

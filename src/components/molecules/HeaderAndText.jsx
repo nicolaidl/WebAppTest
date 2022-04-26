@@ -6,7 +6,6 @@ import Text from "../atoms/Text";
 const style = css`
   .text-container {
     margin: 0px auto;
-    width: 1200px;
     max-width: 100%;
   }
 

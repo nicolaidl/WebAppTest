@@ -4,6 +4,10 @@ import defaultImage from "../../images/default-image.jpg";
 import { css } from "@emotion/react";
 
 const style = css`
+  
+  .grid-image {
+    width: 70%;
+  }
   .image-hero {
     object-fit: cover;
     width: 100%;
@@ -11,9 +15,11 @@ const style = css`
   .image-logo {
     height: 6.2rem;
   }
-  .default {
-    width: "300px";
-    height: "300px";
+  .image-default {
+    width: 100%;
+  }
+  .logo {
+    width: 40rem;
   }
   .standard: {
     width: "300px";
@@ -21,16 +27,14 @@ const style = css`
   }
 `;
 
+//className={`image ${props.type !== "default" ? "-" + props.type : ""}`}
+
 export default function Image(props) {
+  console.log(props);
+
   return (
     <div className="image-atom" css={style}>
-      <div className="image-container">
-        <img
-          className={`image${props.type !== "default" ? "-" + props.type : ""}`}
-          src={props.image}
-          alt={props.alt}
-        />
-      </div>
+      <img className={`${props.type}`} src={props.image} alt={props.alt} />
     </div>
   );
 }
@@ -38,5 +42,5 @@ export default function Image(props) {
 Image.defaultProps = {
   image: defaultImage,
   alt: "default alt",
-  type: "default",
+  type: "image-default",
 };

@@ -2,7 +2,8 @@
 import React from "react";
 import { css } from "@emotion/react";
 import Grid2ColumnsMolecule from "../molecules/Grid2Columns";
-
+import Image from "../atoms/Image";
+import defaultImage from "../../images/default-image.jpg";
 const style = css`
   padding-top: 30px;
   // .grid--2--cols {
@@ -15,7 +16,13 @@ const style = css`
 export default function Grid2Columns(props) {
   return (
     <div className="grid-organism spacer" css={style}>
-      <Grid2ColumnsMolecule>{props.children}</Grid2ColumnsMolecule>
+      <Grid2ColumnsMolecule>
+        <Image image={defaultImage} />
+        <Image image={defaultImage} />
+        <Image image={defaultImage} />
+        <Image image={defaultImage} />
+        <Image image={defaultImage} />
+      </Grid2ColumnsMolecule>
     </div>
   );
 }
@@ -23,8 +30,6 @@ export default function Grid2Columns(props) {
 Grid2Columns.defaultProps = {
   children: [
     <div>Test 1</div>,
-    <div>Test 2</div>,
-    <div>Test 3</div>,
-    <div>Test 4</div>,
+   
   ],
 };

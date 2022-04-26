@@ -190,5 +190,5 @@ export default function Navigation(props) {
 
 Navigation.defaultProps = {
   logo: defaultLogo,
-  navs: ["Home", "Services", "Contact", "About"],
+  navs: ["Home", "Services", "Work-Done", "Contact", "About"],
 };

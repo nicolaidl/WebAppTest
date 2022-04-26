@@ -1,75 +1,66 @@
+/** @jsxImportSource @emotion/react */ // this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
 import React from "react";
-import GridLayout from "react-grid-layout";
-import ResponsiveReactGridLayout from "react-grid-layout/build/ResponsiveReactGridLayout";
-import { Responsive, WidthProvider } from "react-grid-layout";
+import { css } from "@emotion/react";
+
+const style = css`
+  // max-width: 120rem;
+
+  // .grid div {
+  //   max-width: 500px;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  // }
+
+  .container {
+    max-width: 120rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+  }
+
+  .grid {
+    display: grid;
+    gap: 9.6rem;
+  }
+
+  .grid--2--cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--3--cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid--4--cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  // .section-how div div {
+  //   padding: 100px;
+  //   font-size: 50px;
+  //   background-color: #333;
+  // }
+
+`;
 
 export default function Grid(props) {
-  // layout is an array of objects, see the demo for more complete usage
-
-  const ResponsiveGridLayout = WidthProvider(Responsive);
-
-  const layoutDefault = [
-    {
-      i: "a",
-      x: 0,
-      y: 0,
-      w: 1,
-      h: 2,
-      minW: 6,
-      maxW: 12,
-      background: "aliceblue",
-    },
-    { i: "b", x: 1, y: 0, w: 3, h: 2, minW: 6, maxW: 12 },
-  ];
-
-  const layout3Equal = [
-    { i: "a", x: 0, y: 0, w: 1, h: 2, static: true },
-    { i: "b", x: 1, y: 0, w: 3, h: 2, minW: 2, maxW: 4, static: true },
-    { i: "c", x: 4, y: 0, w: 1, h: 2, minW: 2, maxW: 4, static: true },
-  ];
-
-  console.log(props.type);
-
   return (
-    <div>
-      {props.type === "default" || props.type === "" ? (
-        <GridLayout className="layout" cols={12} rowHeight={30} width={1200}>
-          <div key="a" data-grid={{ x: 0, y: 0, w: 1, h: 2, static: true }}>
-            a
-          </div>
-
-          <div
-            key="b"
-            data-grid={{
-              x: 1,
-              y: 0,
-              w: 3,
-              h: 2,
-              minW: 2,
-              maxW: 4,
-              static: true,
-            }}
-          >
-            b
-          </div>
-        </GridLayout>
-      ) : (
-        <GridLayout
-          className="layout"
-          layout={layout3Equal}
-          cols={12}
-          rowHeight={30}
-          width={1200}
-        >
-          <div key="a">a</div>
-          <div key="b">b</div>
-          <div key="c">c</div>
-        </GridLayout>
-      )}
+    <div css={style}>
+        <div className="container grid grid--2--cols">{props.children}</div>
     </div>
   );
 }
 
+{
+  /* <div className={`grid container ${props.type}`}> */
+}
+
 Grid.defaultProps = {
-  type: "default",
+  type: "grid--2--cols",
+  children: [
+    <div>Test 1</div>,
+    <div>Test 2</div>,
+    <div>Test 3</div>,
+    <div>Test 4</div>,
+  ],
 };
