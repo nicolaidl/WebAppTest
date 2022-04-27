@@ -6,7 +6,7 @@ import { css } from "@emotion/react";
 const style = css`
   
   .grid-image {
-    width: 70%;
+    width: 100%;
   }
   .image-hero {
     object-fit: cover;

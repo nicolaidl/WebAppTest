@@ -6,7 +6,13 @@ import HeaderAndText from "./HeaderAndText";
 import Image from "../atoms/Image";
 import defaultImage from "../../images/default-image.jpg";
 
-const style = css``;
+const style = css`
+  @media (max-width: 34em) {
+    .grid--2--cols {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+`;
 
 let getContent = (props) => {
   if (props.type === "imageFirst") {

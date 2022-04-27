@@ -27,6 +27,12 @@ const style = css`
     grid-template-columns: repeat(2, 1fr);
   }
 
+  @media (max-width: 59em) {
+    .grid--2--cols {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
   .grid--3--cols {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -35,18 +41,23 @@ const style = css`
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .grid--1--col-at-mobile {
+    @media (max-width: 34em) {
+      grid-template-columns: repeat(1fr);
+    }
+  }
+
   // .section-how div div {
   //   padding: 100px;
   //   font-size: 50px;
   //   background-color: #333;
   // }
-
 `;
 
 export default function Grid(props) {
   return (
     <div css={style}>
-        <div className="container grid grid--2--cols">{props.children}</div>
+      <div className="grid grid--2--cols">{props.children}</div>
     </div>
   );
 }
