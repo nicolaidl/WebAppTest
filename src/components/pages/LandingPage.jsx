@@ -27,11 +27,12 @@ export default class LandingPage extends Component {
     };
 
     return (
-      <div>
+      <div className="landiong-page" style={{ paddingTop: "20px" }}>
         <Hero
           image={content.heroContent.frontImg}
           text={content.heroContent.text}
           header={content.heroContent.header}
+          shade="rgba(255, 0, 0, 0.2);"
         />
         <HeaderAndText
           header1={content.headerAndTextContent1.header1}

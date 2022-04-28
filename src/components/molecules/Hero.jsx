@@ -85,8 +85,7 @@ const style = css`
   }
 
   .pickgradient {
-    // height: 100%;
-    // height: 100vh;
+    min-width: 100%;
     display: inline-block;
     background: -moz-linear-gradient(
       top,
@@ -120,7 +119,7 @@ const style = css`
       rgba(34, 34, 34, 0.6) 0%,
       rgba(34, 34, 34, 0.6) 100%
     ); /* Chrome10+,Safari5.1+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
   }
 
   img {
@@ -138,7 +137,11 @@ export default function Hero(props) {
     <div css={style} className="hero-molecule">
       <header>
         <div className="pickgradient">
-          <Image image={props.image} type="hero" alt="A desk full of tools" />
+          <Image
+            image={props.image}
+            type="image-hero"
+            alt="A desk full of tools"
+          />
         </div>
 
         <div className="header-container">
@@ -164,4 +167,5 @@ Hero.defaultProps = {
   text: "Default text",
   textColor: "#8A8A8A",
   image: defaultImage,
+  shade: "rgba(0, 0, 0, 0)",
 };

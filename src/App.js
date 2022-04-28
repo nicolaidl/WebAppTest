@@ -6,7 +6,7 @@ import LandingPage from './components/pages/LandingPage';
 import ContactPage from './components/pages/ContactPage';
 import ServicesPage from './components/pages/ServicesPage';
 import AboutPage from './components/pages/AboutPage';
-import WorkDonePage from './components/pages/WorkDonePage';
+import PortfolioPage from './components/pages/PortfolioPage';
 import Navigation from './components/organisms/Navigation';
 import Footer from './components/molecules/Footer';
 import Spacer from './components/atoms/Spacer';
@@ -28,29 +28,25 @@ function App() {
       <Switch>
 
 
-        <Route path="/Home" exact>
-          {/* <Grid2Columns /> */}
+        {/* <Route path="/Home" exact>
           <WorkDonePage />
-        </Route>
-
-
-
+        </Route> */}
         {/* <ContentPage /> */}
-        {/* 
+
         <Route path="/" exact>
           <Redirect to="/Home" />
         </Route>
 
         <Route path="/Home" exact>
           <LandingPage />
-        </Route> */}
+        </Route>
 
         <Route path="/services" exact>
           <ServicesPage />
         </Route>
 
         <Route path="/work-done" exact>
-          <WorkDonePage />
+          <PortfolioPage />
         </Route>
 
         <Route path="/contact" exact>
@@ -59,6 +55,11 @@ function App() {
 
         <Route path="/about" exact>
           <AboutPage />
+        </Route>
+
+        
+        <Route path="/portfolio" exact>
+          <PortfolioPage />
         </Route>
 
         <Route path="*">

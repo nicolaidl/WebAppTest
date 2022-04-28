@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import HeaderAndText from "../organisms/HeaderAndText";
+import Hero from "../organisms/Hero";
+import heroImg from "../../images/services-1.jpg";
 
 export default class ServicesPage extends Component {
   render() {
     let content = {
       headerAndTextContent1: {
-        header1: "Services Page",
+        header1: "Services",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod atque, cum molestias obcaecati maxime! Esse minima reprehenderit natus maxime saepe autem eveniet exercitationem recusandae quo! Perspiciatis non et nulla?",
       },
       headerAndTextContent2: {
@@ -14,7 +16,14 @@ export default class ServicesPage extends Component {
       },
     };
     return (
-      <div style={{ paddingTop: "150px" }}>
+      <div style={{ paddingTop: "50px" }}>
+        <Hero
+          image={heroImg}
+          header={content.headerAndTextContent1.header1}
+          text={content.headerAndTextContent1.text}
+          shade="rgba(255, 0, 0, 0.2);"
+        />
+
         <HeaderAndText
           header1={content.headerAndTextContent1.header1}
           text={content.headerAndTextContent1.text}

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import HeaderAndText from "../organisms/HeaderAndText";
+import Hero from "../organisms/Hero";
+import frontImg from "../../images/about-1.jpeg";
 
 export default class AboutPage extends Component {
   render() {
@@ -14,7 +16,14 @@ export default class AboutPage extends Component {
       },
     };
     return (
-      <div style={{ paddingTop: "150px" }}>
+      <div className="about-page" style={{ paddingTop: "20px" }}>
+        <Hero
+          image={frontImg}
+          text={content.headerAndTextContent1.text}
+          header={content.headerAndTextContent1.header1}
+          shade="rgba(255, 0, 0, 0.2);"
+        />
+
         <HeaderAndText
           header1={content.headerAndTextContent1.header1}
           text={content.headerAndTextContent1.text}

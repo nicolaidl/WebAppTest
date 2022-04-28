@@ -14,7 +14,7 @@ export default class ContactPage extends Component {
       },
     };
     return (
-      <div style={{ paddingTop: "150px" }}>
+      <div className="contact-page" style={{ paddingTop: "20px" }}>
         <HeaderAndText
           header1={content.headerAndTextContent1.header1}
           text={content.headerAndTextContent1.text}

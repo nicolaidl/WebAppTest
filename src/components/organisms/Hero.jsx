@@ -9,6 +9,7 @@ export default function Hero(props) {
         image={props.image}
         header={props.header}
         text={props.text}
+        shade={props.shade}
       />
     </div>
   );
@@ -19,4 +20,5 @@ Hero.defaultProps = {
   text: "Default text",
   textColor: "#8A8A8A",
   image: defaultImage,
+  shade: "rgba(0, 0, 0, 0);"
 };

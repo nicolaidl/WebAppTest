@@ -29,6 +29,16 @@ const style = css`
     flex-direction: column;
     justify-content: center;
     z-index: 999;
+    padding-left: 4rem;
+
+    @media (max-width: 59rem) {
+      padding-left: 2rem;
+    }
+  }
+
+  .navigation-box2 {
+    display: flex;
+    padding-right: 4rem;
   }
 
   .main-nav-list {
@@ -36,10 +46,10 @@ const style = css`
     display: flex;
     align-items: center;
     gap: 3.2rem;
-  }
 
-  .navigation-box2 {
-    display: flex;
+    @media (max-width: 59rem) {
+      gap: 0;
+    }
   }
 
   .main-nav-link:link,
@@ -71,6 +81,7 @@ const style = css`
     border: none;
     background: none;
     cursor: pointer;
+    padding-right: 4rem;
   }
 
   .icon-mobile-nav {
@@ -95,7 +106,7 @@ const style = css`
 
     .main-nav-list {
       flex-direction: column;
-      gap: 4.8rem;
+      // gap: 4.8rem;
     }
 
     .main-nav-link {
@@ -165,24 +176,23 @@ export default function Navigation(props) {
               {props.navs.map((object, i) => (
                 <li key={i} onClick={() => setMobileNavigationIsOpen(false)}>
                   <NavLink
-                    to={object}
+                    to={object.link}
                     // className="link btn"
                     className="main-nav-link"
                     // className="link btn"
-                     activeClassName="a-active-class"
+                    activeClassName="a-active-class"
                   >
-                    <Text type="p-nav-main" tag="p" text={object} />
+                    <Text type="p-nav-main" tag="p" text={object.name} />
                   </NavLink>
                 </li>
               ))}
             </ul>
           </div>
-
-          <button className="btn-mobile-nav" onClick={clickOnBtnMobileNav}>
-            <AiOutlineMenu className="icon-mobile-nav" name="menu-outline" />
-            <AiOutlineClose className="icon-mobile-nav" name="close-outline" />
-          </button>
         </nav>
+        <button className="btn-mobile-nav" onClick={clickOnBtnMobileNav}>
+          <AiOutlineMenu className="icon-mobile-nav" name="menu-outline" />
+          <AiOutlineClose className="icon-mobile-nav" name="close-outline" />
+        </button>
       </div>
     </div>
   );
@@ -190,5 +200,5 @@ export default function Navigation(props) {
 
 Navigation.defaultProps = {
   logo: defaultLogo,
-  navs: ["Home", "Services", "Work-Done", "Contact", "About"],
+  navs: ["default1", "default2", "default3"],
 };

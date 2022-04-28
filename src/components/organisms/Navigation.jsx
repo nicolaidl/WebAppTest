@@ -2,7 +2,7 @@
 import React from "react";
 import { css } from "@emotion/react";
 import NavigationMolecule from "../molecules/Navigation";
-import Spacer from "../atoms/Spacer";
+import defaultLogo from "../../images/logo-default.png";
 
 const style = css`
   .navigation-organism-container {
@@ -22,9 +22,9 @@ const style = css`
 
 export default function Navigation(props) {
   return (
-    <div className="navigation-organism spacer" css={style}>
+    <div className="navigation-organism" css={style}>
       <div className="navigation-organism-container">
-        <NavigationMolecule />
+        <NavigationMolecule navs={props.navs} logo={props.logo} />
       </div>
     </div>
   );
@@ -34,4 +34,12 @@ Navigation.defaultProps = {
   backgroundColor: "#fff",
   text: "Default text",
   textColor: "#8A8A8A",
+  logo: defaultLogo,
+  navs: [
+    { name: "Home", link: "Home" },
+    { name: "About", link: "About" },
+    { name: "Services", link: "Services" },
+    { name: "Portfolio", link: "Portfolio" },
+    { name: "Contact", link: "Contact" },
+  ],
 };

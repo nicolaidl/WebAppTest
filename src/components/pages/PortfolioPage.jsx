@@ -13,7 +13,7 @@ export default class WorkDonePage extends Component {
   render() {
     let content = {
       headerAndTextContent1: {
-        header1: "Work Done Page",
+        header1: "Portfolio",
         text: "This page is for showcasing some projects.",
       },
       text1: {
@@ -31,7 +31,7 @@ export default class WorkDonePage extends Component {
     };
 
     return (
-      <div style={{ paddingTop: "50px" }}>
+      <div className="portfolio-page" style={{ paddingTop: "20px" }}>
         <HeaderAndText
           header1={content.headerAndTextContent1.header1}
           text={content.headerAndTextContent1.text}

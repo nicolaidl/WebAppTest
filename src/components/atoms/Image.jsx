@@ -4,13 +4,13 @@ import defaultImage from "../../images/default-image.jpg";
 import { css } from "@emotion/react";
 
 const style = css`
-  
   .grid-image {
     width: 100%;
   }
   .image-hero {
     object-fit: cover;
     width: 100%;
+    min-width: 100%;
   }
   .image-logo {
     height: 6.2rem;
@@ -20,6 +20,10 @@ const style = css`
   }
   .logo {
     width: 40rem;
+
+    @media (max-width: 59em) {
+      width: 30rem;
+    }
   }
   .standard: {
     width: "300px";
