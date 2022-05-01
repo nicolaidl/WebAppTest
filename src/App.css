@@ -1,6 +1,13 @@
 .spacer {
   max-width: 120rem;
   padding: 0 3.2rem;
+  
+  /*        
+  Centrerer alt content
+  sVARER TIL 
+  margin-left: auto;
+  margin-right: autp;
+   */
   margin: 0 auto;
 }
 

@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+.header1 {
+  font-size: 5.2rem;
+}
+
+.header2 {
+  font-size: 4.4rem;
+}
+
+.header3 {
+  font-size: 4rem;
+}
+
+.header4 {
+  font-size: 3.2rem;
+}
+
+.p1 {
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+.p-nav-main {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 75rem) {
+  .header1 {
+    font-size: 4.4rem;
+  }
+}
+
+@media (max-width: 59rem) {
+  .p-nav-main {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 600px) {
+}
+
+/* 
+.header1 {
+  font-size: 5.2rem;
+
+  @media (max-width: 75rem) {
+    font-size: 4.4rem;
+  }
+
+  @media (max-width: 1200px) {
+    max-width: 60%;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+    width: 400px;
+  }
+} */

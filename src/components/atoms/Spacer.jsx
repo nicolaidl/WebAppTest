@@ -7,10 +7,8 @@ const style = css`
     max-width: 100%;
     background-color: white;
 
-    @media (min-width: 1201px) {
-      padding-left: 8em;
-      padding-right: 8rem;
-    }
+    padding-left: 8em;
+    padding-right: 8rem;
 
     @media (max-width: 1200px) {
       padding-left: 4em;
