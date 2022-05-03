@@ -1,46 +1,22 @@
 import React from "react";
-import styles from "./Text.css";
+import styles from "./Text.module.css";
 
 export default function Text(props) {
   let renderSwitch = (tag, content) => {
     let pClassName = `${getType(props.tag, props.type)}`;
     switch (tag) {
       case "p":
-        return (
-          <p className={pClassName} style={styles[pClassName]}>
-            {content}
-          </p>
-        );
+        return <p className={styles[pClassName]}>{content}</p>;
       case "h1":
-        return (
-          <h1 className={pClassName} style={styles[pClassName]}>
-            {content}
-          </h1>
-        );
+        return <h1 className={styles[pClassName]}>{content}</h1>;
       case "h2":
-        return (
-          <h2 className={pClassName} style={styles[pClassName]}>
-            {content}
-          </h2>
-        );
+        return <h2 className={styles[pClassName]}>{content}</h2>;
       case "h3":
-        return (
-          <h3 className={pClassName} style={styles[pClassName]}>
-            {content}
-          </h3>
-        );
+        return <h3 className={styles[pClassName]}>{content}</h3>;
       case "h4":
-        return (
-          <h4 className={pClassName} style={styles[pClassName]}>
-            {content}
-          </h4>
-        );
+        return <h4 className={styles[pClassName]}>{content}</h4>;
       default:
-        return (
-          <p className={pClassName} style={styles[pClassName]}>
-            "content"
-          </p>
-        );
+        return <p className={styles[pClassName]}>"content"</p>;
     }
   };
 

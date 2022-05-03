@@ -1,66 +1,6 @@
-/** @jsxImportSource @emotion/react */ // this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
 import React from "react";
-import { css } from "@emotion/react";
-import Text from "../atoms/Text";
-
-const style = css`
-  .text-container {
-    margin: 0px auto;
-    max-width: 100%;
-  }
-
-  h1 {
-    margin-bottom: 3.2rem;
-  }
-
-  h2 {
-    margin-bottom: 4.8rem;
-  }
-
-  h3 {
-    margin-bottom: 2.4rem;
-  }
-
-  h4 {
-    margin-bottom: 2.4rem;
-  }
-
-  @media (max-width: 1200px) {
-    h1 {
-      margin-bottom: 3.2rem;
-    }
-
-    h2 {
-      margin-bottom: 4.8rem;
-    }
-
-    h3 {
-      margin-bottom: 2.4rem;
-    }
-
-    h4 {
-      margin-bottom: 2.4rem;
-    }
-  }
-
-  @media (max-width: 600px) {
-    h1 {
-      margin-bottom: 3.2rem;
-    }
-
-    h2 {
-      margin-bottom: 4.8rem;
-    }
-
-    h3 {
-      margin-bottom: 2.4rem;
-    }
-
-    h4 {
-      margin-bottom: 2.4rem;
-    }
-  }
-`;
+import Text from "../atoms/text/Text";
+import styles from "./HeaderAndText.module.css";
 
 export default function HeaderAndText(props) {
   let divStyle = {
@@ -69,28 +9,28 @@ export default function HeaderAndText(props) {
   };
 
   return (
-    <div css={style} className="header-and-text-molecule">
-      <div className="text-container" style={divStyle}>
+    <div className="header-and-text-molecule" style={divStyle}>
+      <div className={styles["text-container"]}>
         {props.header1 ? (
-          <Text tag="h1" type="header1" text={props.header1} />
+          <Text tag="h1" type="header1" text={props.header1} className={styles.h1} />
         ) : (
           ""
         )}
 
         {props.header2 ? (
-          <Text tag="h2" type="header2" text={props.header2} />
+          <Text tag="h2" type="header2" text={props.header2} className={styles.h2} />
         ) : (
           ""
         )}
 
         {props.header3 ? (
-          <Text tag="h3" type="header3" text={props.header3} />
+          <Text tag="h3" type="header3" text={props.header3} className={styles.h3} />
         ) : (
           ""
         )}
 
         {props.header4 ? (
-          <Text tag="h4" type="header4" text={props.header4} />
+          <Text tag="h4" type="header4" text={props.header4} className={styles.h4}/>
         ) : (
           ""
         )}

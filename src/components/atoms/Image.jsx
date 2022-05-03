@@ -34,7 +34,6 @@ const style = css`
 //className={`image ${props.type !== "default" ? "-" + props.type : ""}`}
 
 export default function Image(props) {
-  console.log(props);
 
   return (
     <div className="image-atom" css={style}>

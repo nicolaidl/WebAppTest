@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { css } from "@emotion/react";
-import Text from "../atoms/Text";
+import Text from "../atoms/text/Text";
 import logo from "../../images/Logo-DK3.png";
 import Image from "../atoms/Image";
 import defaultLogo from "../../images/logo-default.png";
@@ -158,7 +158,6 @@ export default function Navigation(props) {
 
   return (
     <div className="navigation-molecule" css={style}>
-      {/* <div className="navigation-container "> */}
       <div
         className={`navigation-container ${
           mobileNavigationIsOpen ? "nav-open" : ""
@@ -177,9 +176,7 @@ export default function Navigation(props) {
                 <li key={i} onClick={() => setMobileNavigationIsOpen(false)}>
                   <NavLink
                     to={object.link}
-                    // className="link btn"
                     className="main-nav-link"
-                    // className="link btn"
                     activeClassName="a-active-class"
                   >
                     <Text type="p-nav-main" tag="p" text={object.name} />
