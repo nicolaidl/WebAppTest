@@ -10,6 +10,8 @@ export default function Hero(props) {
         header={props.header}
         text={props.text}
         shade={props.shade}
+        ctaLink={props.ctaLink}
+        ctaText={props.ctaText}
       />
     </div>
   );
@@ -18,7 +20,8 @@ export default function Hero(props) {
 Hero.defaultProps = {
   header: "Default Header",
   text: "Default text",
+  ctaLink: "/",
   textColor: "#8A8A8A",
   image: defaultImage,
-  shade: "rgba(0, 0, 0, 0);"
+  shade: "rgba(0, 0, 0, 0);",
 };

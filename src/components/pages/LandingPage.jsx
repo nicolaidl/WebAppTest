@@ -15,6 +15,8 @@ export default class LandingPage extends Component {
         header: "A healthy meal delivered to your door, every single day",
         text: "The smart 365-days-per-yer food sub that will make Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         frontImg: frontImg,
+        ctaText: "See all services",
+        ctaLink: "/Services",
       },
       headerAndTextContent1: {
         header1: "Landing Page",
@@ -27,21 +29,25 @@ export default class LandingPage extends Component {
     };
 
     return (
-      <div className="landiong-page" style={{ paddingTop: "20px" }}>
-        <Hero
-          image={content.heroContent.frontImg}
-          text={content.heroContent.text}
-          header={content.heroContent.header}
-          shade="rgba(255, 0, 0, 0.2);"
-        />
-        <HeaderAndText
-          header1={content.headerAndTextContent1.header1}
-          text={content.headerAndTextContent1.text}
-          backgroundColor={"#fff"}
-          textColor={"#000"}
-        />
-
+      <div className="landing-page" style={{ paddingTop: "20px" }}>
+        <header>
+          <Hero
+            image={content.heroContent.frontImg}
+            text={content.heroContent.text}
+            header={content.heroContent.header}
+            shade="rgba(255, 0, 0, 0.2);"
+            ctaLink={content.heroContent.ctaLink}
+            ctaText={content.heroContent.ctaText}
+          />
+        </header>
         <section>
+          <HeaderAndText
+            header1={content.headerAndTextContent1.header1}
+            text={content.headerAndTextContent1.text}
+            backgroundColor={"#fff"}
+            textColor={"#000"}
+          />
+
           <HeaderAndText
             header2={content.headerAndTextContent2.header2}
             text={content.headerAndTextContent2.text}

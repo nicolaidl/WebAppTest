@@ -7,6 +7,16 @@ import styles from "./Hero.module.css";
 import windowDimension from "../../utils/MediaQuery.jsx";
 
 export default function Hero(props) {
+  let renderCta = (props) => {
+    return props.ctaText ? (
+      <Link to={props.ctaLink} className={styles["nav-btn"]}>
+        {props.ctaText} &rarr;
+      </Link>
+    ) : (
+      ";"
+    );
+  };
+
   return (
     <div className={styles["hero-molecule"]}>
       {windowDimension() !== "phone" ? (
@@ -26,10 +36,7 @@ export default function Hero(props) {
                 text={props.text}
                 textColor={"#fff"}
               />
-
-              <Link to="/Services" className={styles["nav-btn"]}>
-                {"See all services "}&rarr;
-              </Link>
+              {renderCta(props)}
             </div>
           </div>
         </div>
@@ -42,9 +49,7 @@ export default function Hero(props) {
               textColor={"#333"}
             />
 
-            <Link to="/Services" className={styles["nav-btn"]}>
-              {"See all services "}&rarr;
-            </Link>
+            {renderCta(props)}
           </div>
 
           <div className={styles.pickgradient}>
@@ -63,6 +68,7 @@ export default function Hero(props) {
 Hero.defaultProps = {
   header: "Default Header",
   text: "Default text",
+  ctaLink: "/",
   textColor: "#8A8A8A",
   image: defaultImage,
   shade: "rgba(0, 0, 0, 0)",
