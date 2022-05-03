@@ -1,6 +1,4 @@
 /* Small desktops */
-/* Below 944px - Portrait Oriented Tablets*/
-/* Calculation: 940px / 16px */
 @media (max-width: 84rem) {
   /* .hero {
     max-width: 120em;

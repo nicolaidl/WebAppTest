@@ -42,7 +42,7 @@ export default function HeaderAndText(props) {
 }
 
 HeaderAndText.defaultProps = {
-  // type: "body",
+   type: "body",
   // header1: "Default Header 1",
   // header2: "Default Header 2",
   // header3: "Default Header 3",
