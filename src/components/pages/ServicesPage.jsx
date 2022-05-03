@@ -17,21 +17,23 @@ export default class ServicesPage extends Component {
     };
     return (
       <div style={{ paddingTop: "50px" }}>
-        <Hero
-          image={heroImg}
-          header={content.headerAndTextContent1.header1}
-          text={content.headerAndTextContent1.text}
-          shade="rgba(255, 0, 0, 0.2);"
-        />
-
-        <HeaderAndText
-          header1={content.headerAndTextContent1.header1}
-          text={content.headerAndTextContent1.text}
-          backgroundColor={"#fff"}
-          textColor={"#000"}
-        />
-
+        <header>
+          <Hero
+            image={heroImg}
+            header={content.headerAndTextContent1.header1}
+            text={content.headerAndTextContent1.text}
+            shade="rgba(255, 0, 0, 0.2);"
+          />
+        </header>
+        
         <section>
+          <HeaderAndText
+            header1={content.headerAndTextContent1.header1}
+            text={content.headerAndTextContent1.text}
+            backgroundColor={"#fff"}
+            textColor={"#000"}
+          />
+
           <HeaderAndText
             header2={content.headerAndTextContent2.header2}
             text={content.headerAndTextContent2.text}

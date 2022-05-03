@@ -15,14 +15,14 @@ export default class ContactPage extends Component {
     };
     return (
       <div className="contact-page" style={{ paddingTop: "20px" }}>
-        <HeaderAndText
-          header1={content.headerAndTextContent1.header1}
-          text={content.headerAndTextContent1.text}
-          backgroundColor={"#fff"}
-          textColor={"#000"}
-        />
-
         <section>
+          <HeaderAndText
+            header1={content.headerAndTextContent1.header1}
+            text={content.headerAndTextContent1.text}
+            backgroundColor={"#fff"}
+            textColor={"#000"}
+          />
+
           <HeaderAndText
             header2={content.headerAndTextContent2.header2}
             text={content.headerAndTextContent2.text}

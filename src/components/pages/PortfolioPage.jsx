@@ -32,13 +32,15 @@ export default class WorkDonePage extends Component {
 
     return (
       <div className="portfolio-page" style={{ paddingTop: "20px" }}>
-        <HeaderAndText
-          header1={content.headerAndTextContent1.header1}
-          text={content.headerAndTextContent1.text}
-          backgroundColor={"#fff"}
-          textColor={"#000"}
-        />
-
+        <header>
+          <HeaderAndText
+            header1={content.headerAndTextContent1.header1}
+            text={content.headerAndTextContent1.text}
+            backgroundColor={"#fff"}
+            textColor={"#000"}
+          />
+        </header>
+        
         <section>
           <ImageAndText
             image={img1}
